@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css" />
+<style>
+@keyframes dsStage{from{opacity:0;transform:scale(.968)}to{opacity:1;transform:none}}
+@keyframes dsRise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes dsPop{from{opacity:0;transform:scale(.84)}to{opacity:1;transform:none}}
+@keyframes dsBar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+body{margin:0;background:#000}
+section[data-label]{word-break:keep-all;overflow-wrap:break-word}
+a{color:#1A6DD9;text-decoration:none}
+a:hover{color:#0E4CA8}
+section[data-deck-active] [data-a="stage"]{animation:dsStage var(--dsDur,640ms) cubic-bezier(.2,.85,.25,1) both}
+section[data-deck-active] [data-a="rise"]{animation:dsRise var(--dsDur,640ms) cubic-bezier(.2,.85,.25,1) both}
+section[data-deck-active] [data-a="pop"]{animation:dsPop calc(var(--dsDur,640ms) * 1.15) cubic-bezier(.16,.9,.2,1) both;animation-delay:.22s}
+section[data-deck-active] [data-a="bar"]{animation:dsBar calc(var(--dsDur,640ms) * 1.45) cubic-bezier(.2,.85,.25,1) both;animation-delay:.3s;transform-origin:left center}
+section[data-deck-active] [data-d="1"]{animation-delay:.14s}
+section[data-deck-active] [data-d="2"]{animation-delay:.26s}
+section[data-deck-active] [data-d="3"]{animation-delay:.38s}
+section[data-deck-active] [data-d="4"]{animation-delay:.5s}
+section[data-deck-active] [data-d="5"]{animation-delay:.62s}
+html[data-ds-nocredit] [data-credit]{display:none}
+</style>
+</helmet>
+
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<section data-label="표지" data-screen-label="01" data-speaker-notes="제2차 공공누리집 UI/UX 위원회 의견제출서의 별첨 근거자료입니다. 코레일+ 예약 과정 전반의 VOC를 정리했습니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:3.45%;height:100%;background:#1A6DD9;"></div></div>
+  <div data-a="stage" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 160px;">
+    <div style="display:flex;align-items:center;gap:18px;margin-bottom:40px;">
+      <div style="width:44px;height:4px;background:#1A6DD9;"></div>
+      <div style="font-size:24px;font-weight:600;letter-spacing:0.18em;color:#1A6DD9;">제2차 공공누리집 UI/UX 위원회 · 의견제출서 별첨</div>
+    </div>
+    <h1 style="margin:0;font-size:82px;font-weight:700;line-height:1.18;letter-spacing:-0.035em;text-wrap:pretty;">통합 앱 코레일+<br />예약 과정 UX/UI VOC 인사이트 보고서</h1>
+    <div style="margin-top:52px;padding-top:36px;border-top:1px solid #E4E7EC;display:grid;grid-template-columns:200px 1fr;gap:32px 48px;font-size:26px;line-height:1.6;">
+      <div style="font-weight:600;color:#8B93A0;letter-spacing:0.06em;">검토 범위</div>
+      <div style="font-weight:500;color:#3D4451;">열차 조회 · 예약 · 예약 변경 · 결제 · 결제 취소 등</div>
+      <div style="font-weight:600;color:#8B93A0;letter-spacing:0.06em;">조사 기간</div>
+      <div style="font-weight:500;color:#3D4451;">2026년 8월 3일 앱 출시 이후 ~ 9월 6일 · 통합 운행 시작 9월 1일 포함</div>
+    </div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:56px;left:160px;display:flex;align-items:center;gap:16px;">
+    <div style="width:28px;height:1px;background:#D5D9DF;"></div>
+    <div style="font-size:26px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+  </div>
+</section>
+
+<section data-label="보고 구성" data-screen-label="02" data-speaker-notes="보고는 여섯 부분입니다. 조사 자료를 먼저 밝히고, 공식 조사와 이용자 평가의 차이, SNS 설문, 공개 후기 분석, 원인 분류, 보안과 공정성, 권고를 순서대로 다룹니다." style="background:#F6F7F9;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#E1E4E9;"><div style="width:6.90%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>보고 구성</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">02 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:150px 120px 120px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:58px;font-weight:700;letter-spacing:-0.03em;">보고 순서</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px;">
+      <div style="background:#FFFFFF;padding:34px 36px 30px;border-top:4px solid #1A6DD9;">
+        <div style="font-size:44px;font-weight:700;color:#1A6DD9;letter-spacing:-0.04em;font-variant-numeric:tabular-nums;">1부</div>
+        <div style="margin-top:18px;font-size:34px;font-weight:700;letter-spacing:-0.025em;line-height:1.3;">공식 조사와 이용자 평가</div>
+        <div style="margin-top:18px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.6;">공식 만족도 조사 결과, 앱스토어 평점, 연령대별 차이</div>
+        <div style="margin-top:22px;font-size:24px;font-weight:600;color:#8B93A0;">6 – 8장</div>
+      </div>
+      <div style="background:#FFFFFF;padding:34px 36px 30px;border-top:4px solid #1A6DD9;">
+        <div style="font-size:44px;font-weight:700;color:#1A6DD9;letter-spacing:-0.04em;font-variant-numeric:tabular-nums;">2부</div>
+        <div style="margin-top:18px;font-size:34px;font-weight:700;letter-spacing:-0.025em;line-height:1.3;">SNS 설문 1,026명</div>
+        <div style="margin-top:18px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.6;">설문 참여자가 보내온 개선 의견을 범주별로 정리</div>
+        <div style="margin-top:22px;font-size:24px;font-weight:600;color:#8B93A0;">9 – 12장</div>
+      </div>
+      <div style="background:#FFFFFF;padding:34px 36px 30px;border-top:4px solid #1A6DD9;">
+        <div style="font-size:44px;font-weight:700;color:#1A6DD9;letter-spacing:-0.04em;font-variant-numeric:tabular-nums;">3부</div>
+        <div style="margin-top:18px;font-size:34px;font-weight:700;letter-spacing:-0.025em;line-height:1.3;">공개 후기 603건 분석</div>
+        <div style="margin-top:18px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.6;">별점 분포, 범주별 후기 수, App Store 후기와 언론 보도</div>
+        <div style="margin-top:22px;font-size:24px;font-weight:600;color:#8B93A0;">13 – 16장</div>
+      </div>
+      <div style="background:#FFFFFF;padding:34px 36px 30px;border-top:4px solid #1A6DD9;">
+        <div style="font-size:44px;font-weight:700;color:#1A6DD9;letter-spacing:-0.04em;font-variant-numeric:tabular-nums;">4부</div>
+        <div style="margin-top:18px;font-size:34px;font-weight:700;letter-spacing:-0.025em;line-height:1.3;">원인 분류</div>
+        <div style="margin-top:18px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.6;">용어인지 경로인지, 늘어난 조작, 호환성, 오류 조치율</div>
+        <div style="margin-top:22px;font-size:24px;font-weight:600;color:#8B93A0;">17 – 20장</div>
+      </div>
+      <div style="background:#FFFFFF;padding:34px 36px 30px;border-top:4px solid #1A6DD9;">
+        <div style="font-size:44px;font-weight:700;color:#1A6DD9;letter-spacing:-0.04em;font-variant-numeric:tabular-nums;">5부</div>
+        <div style="margin-top:18px;font-size:34px;font-weight:700;letter-spacing:-0.025em;line-height:1.3;">보안과 공정성</div>
+        <div style="margin-top:18px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.6;">예약대기 자동 진입 점검 결과와 매크로 탐지 기준</div>
+        <div style="margin-top:22px;font-size:24px;font-weight:600;color:#8B93A0;">21 – 24장</div>
+      </div>
+      <div style="background:#FFFFFF;padding:34px 36px 30px;border-top:4px solid #1A6DD9;">
+        <div style="font-size:44px;font-weight:700;color:#1A6DD9;letter-spacing:-0.04em;font-variant-numeric:tabular-nums;">6부</div>
+        <div style="margin-top:18px;font-size:34px;font-weight:700;letter-spacing:-0.025em;line-height:1.3;">인사이트와 권고</div>
+        <div style="margin-top:18px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.6;">시급한 과제와 장기 과제, 검수 시나리오, Summary</div>
+        <div style="margin-top:22px;font-size:24px;font-weight:600;color:#8B93A0;">25 – 29장</div>
+      </div>
+    </div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:46px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="핵심 요약" data-screen-label="03" data-speaker-notes="결론을 먼저 말씀드립니다. 화면은 정리됐다는 평가가 많습니다. 그런데 매일 쓰는 경로에서는 조작이 늘었고, 결제와 승차권에서 금전 손실로 이어지는 신고가 남아 있습니다." style="background:#0E1A2B;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#FFFFFF;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:rgba(255,255,255,0.14);"><div style="width:10.34%;height:100%;background:#4E92F0;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:rgba(255,255,255,0.64);"><span>핵심 요약</span><span style="font-variant-numeric:tabular-nums;color:rgba(255,255,255,0.58);">03 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:170px 140px 140px;display:flex;flex-direction:column;justify-content:center;">
+    <div style="font-size:62px;font-weight:700;line-height:1.32;letter-spacing:-0.03em;text-wrap:pretty;">화면은 정리됐지만,<br /><span style="color:#7FB2F5;">매일 쓰는 경로에서 조작이 늘었습니다.</span></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:76px;padding-top:44px;border-top:1px solid rgba(255,255,255,0.16);">
+      <div style="padding-right:52px;">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:rgba(255,255,255,0.5);">시각 개선은 확인됩니다</div>
+        <div data-a="rise" data-d="1" style="margin-top:18px;font-size:30px;font-weight:500;line-height:1.6;color:rgba(255,255,255,0.9);">공식 조사에서 좋아진 점 1위는 디자인·UI 23.9%였습니다. 언론도 아이콘 중심 배치를 긍정적으로 봤습니다.</div>
+      </div>
+      <div style="padding:0 52px;border-left:1px solid rgba(255,255,255,0.16);">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:rgba(255,255,255,0.5);">반복 경로는 길어졌습니다</div>
+        <div data-a="rise" data-d="2" style="margin-top:18px;font-size:30px;font-weight:500;line-height:1.6;color:rgba(255,255,255,0.9);">정기승차권 확인, 좌석 등급 선택, 타는 곳 확인에서 단계가 하나씩 늘었습니다.</div>
+      </div>
+      <div style="padding-left:52px;border-left:1px solid rgba(255,255,255,0.16);">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:rgba(255,255,255,0.5);">돈과 탑승에 닿는 문제가 남았습니다</div>
+        <div data-a="rise" data-d="3" style="margin-top:18px;font-size:30px;font-weight:500;line-height:1.6;color:rgba(255,255,255,0.9);">결제 후 발권 실패, 가입 차단, 탑승 직전 승차권 확인 실패 신고가 9월 후기에도 있습니다.</div>
+      </div>
+    </div>
+    <div data-a="rise" data-d="5" style="margin-top:56px;font-size:28px;font-weight:500;color:rgba(255,255,255,0.72);line-height:1.6;">추석 일반예매가 9월 7일 시작입니다. 결제·발권 정확성과 매크로 차단은 최대한 빨리 판단이 필요합니다.</div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:52px;left:120px;font-size:24px;font-weight:500;color:rgba(255,255,255,0.62);letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="조사 자료" data-screen-label="04" data-speaker-notes="분석에 활용된 데이터 출처입니다. 행정안전부가 전달한 공식 자료, 직접 진행한 SNS 설문, 구글 플레이 후기 603건, App Store 후기와 언론 보도입니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:13.79%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>조사 개요</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">04 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:148px 120px 116px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:58px;font-weight:700;letter-spacing:-0.03em;">분석에 활용된 데이터 출처</h2>
+    <div style="margin-top:52px;display:flex;flex-direction:column;">
+      <div style="display:grid;grid-template-columns:300px 1fr 300px;align-items:baseline;gap:44px;padding:30px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">공식 전달 자료</div>
+        <div style="font-size:27px;font-weight:400;color:#5A6270;line-height:1.55;">행정안전부 전달 · 한국철도공사 작성(9월 2일) 2쪽. 만족도 조사 결과와 오류 접수·조치 현황</div>
+        <div style="font-size:27px;font-weight:600;color:#1A6DD9;text-align:right;font-variant-numeric:tabular-nums;">응답 70,768명</div>
+      </div>
+      <div style="display:grid;grid-template-columns:300px 1fr 300px;align-items:baseline;gap:44px;padding:30px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">SNS 설문</div>
+        <div style="font-size:27px;font-weight:400;color:#5A6270;line-height:1.55;">9월 4일 게시 · 만족도와 개선 의견을 함께 받음</div>
+        <div style="font-size:27px;font-weight:600;color:#1A6DD9;text-align:right;font-variant-numeric:tabular-nums;">참여 1,026명</div>
+      </div>
+      <div style="display:grid;grid-template-columns:300px 1fr 300px;align-items:baseline;gap:44px;padding:30px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">구글 플레이 후기</div>
+        <div style="font-size:27px;font-weight:400;color:#5A6270;line-height:1.55;">한국 페이지 최신순 열람. 660건 확보 후 출시일 이전 57건 제외, 중복 제거</div>
+        <div style="font-size:27px;font-weight:600;color:#1A6DD9;text-align:right;font-variant-numeric:tabular-nums;">603건 판독</div>
+      </div>
+      <div style="display:grid;grid-template-columns:300px 1fr 300px;align-items:baseline;gap:44px;padding:30px 0;border-top:1px solid #E4E7EC;border-bottom:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">App Store(iOS) 후기와 언론 보도</div>
+        <div style="font-size:27px;font-weight:400;color:#5A6270;line-height:1.55;">앱스토어 공개 후기 10건(8월 5~24일 표시), 쿠키뉴스·비즈워치·대구일보 기사</div>
+        <div style="font-size:27px;font-weight:600;color:#1A6DD9;text-align:right;font-variant-numeric:tabular-nums;">후기 10건 · 기사 3건</div>
+      </div>
+    </div>
+    
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:48px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="통합 일정" data-screen-label="05" data-speaker-notes="앱 출시와 운영 통합은 시점이 다릅니다. 8월 3일에 앱이 나왔고, 9월 1일에 운행이 합쳐졌습니다. 그리고 통합 이후 첫 명절 예매가 9월 3일부터 시작됐습니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:17.24%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>조사 개요</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">05 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:160px 120px 130px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:58px;font-weight:700;letter-spacing:-0.03em;">앱 출시와 운영 통합은 시점이 다릅니다</h2>
+    <div style="margin-top:20px;font-size:28px;font-weight:400;color:#5A6270;letter-spacing:-0.01em;">두 시점을 같은 사건으로 보면 후기의 발생 원인을 잘못 짚게 됩니다</div>
+    <div style="position:relative;margin-top:88px;">
+      <div style="position:absolute;top:11px;left:0;right:0;height:2px;background:#E4E7EC;"></div>
+      <div data-a="bar" style="position:absolute;top:11px;left:0;width:100%;height:2px;background:#1A6DD9;"></div>
+      <div style="position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:32px;">
+        <div>
+          <div style="width:24px;height:24px;border-radius:50%;background:#1A6DD9;"></div>
+          <div style="margin-top:28px;font-size:32px;font-weight:700;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;">8월 3일</div>
+          <div style="margin-top:14px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.55;">코레일+ 출시. 기존 코레일톡을 업데이트하는 방식</div>
+        </div>
+        <div>
+          <div style="width:24px;height:24px;border-radius:50%;background:#1A6DD9;"></div>
+          <div style="margin-top:28px;font-size:32px;font-weight:700;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;">8월 4~13일</div>
+          <div style="margin-top:14px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.55;">공식 만족도 조사. 70,768명 응답</div>
+        </div>
+        <div>
+          <div style="width:24px;height:24px;border-radius:50%;background:#1A6DD9;"></div>
+          <div style="margin-top:28px;font-size:32px;font-weight:700;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;">8월 31일</div>
+          <div style="margin-top:14px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.55;">SRT 앱과 SR 홈페이지의 예매 기능 종료</div>
+        </div>
+        <div>
+          <div data-a="pop" style="width:24px;height:24px;border-radius:50%;background:#1A6DD9;box-shadow:0 0 0 8px rgba(26,109,217,0.16);"></div>
+          <div style="margin-top:28px;font-size:32px;font-weight:700;letter-spacing:-0.02em;color:#1A6DD9;font-variant-numeric:tabular-nums;">9월 1일</div>
+          <div style="margin-top:14px;font-size:25px;font-weight:400;color:#3D4451;line-height:1.55;">운영 통합. KTX 운임 10% 인하, 주말 좌석 최대 1만 7천석 확대</div>
+        </div>
+        <div>
+          <div data-a="pop" data-d="2" style="width:24px;height:24px;border-radius:50%;background:#1A6DD9;box-shadow:0 0 0 8px rgba(26,109,217,0.16);"></div>
+          <div style="margin-top:28px;font-size:32px;font-weight:700;letter-spacing:-0.02em;color:#1A6DD9;font-variant-numeric:tabular-nums;">9월 3~11일</div>
+          <div style="margin-top:14px;font-size:25px;font-weight:400;color:#3D4451;line-height:1.55;">추석 승차권 예매. 3일 교통약자 사전예매, 7~11일 일반예매</div>
+        </div>
+      </div>
+    </div>
+    <div data-a="rise" data-d="5" style="margin-top:76px;padding-top:36px;border-top:1px solid #E4E7EC;font-size:30px;font-weight:600;color:#14171C;letter-spacing:-0.015em;line-height:1.5;">통합 이후 첫 명절 예매가 지금 진행되고 있습니다. 예매 기간에는 역 창구에서 표를 팔지 않아 앱과 홈페이지가 유일한 창구입니다.</div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:52px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="공식 만족도" data-screen-label="06" data-speaker-notes="공식 조사에서는 5점 중 4점대로 나왔습니다. 디자인 4.01점, 사용성과 편의성 4.05점, 추천의향 4.35점입니다. 기존 앱보다 좋다는 응답이 54.7퍼센트였습니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:20.69%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>공식 조사와 이용자 평가</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">06 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:160px 120px 130px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:58px;font-weight:700;letter-spacing:-0.03em;">공식 조사에서는 5점 중 4점대로 나왔습니다</h2>
+    <div style="margin-top:20px;font-size:28px;font-weight:400;color:#5A6270;letter-spacing:-0.01em;">운영 개시 후 10일간(8월 4~13일) 조사 · 응답 70,768명 · 5점 척도</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:64px;border-top:1px solid #E4E7EC;">
+      <div style="padding:44px 56px 0 0;border-right:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#8B93A0;">디자인</div>
+        <div style="margin-top:24px;font-size:112px;font-weight:700;line-height:0.9;letter-spacing:-0.045em;color:#3D4451;font-variant-numeric:tabular-nums;">4.01</div>
+      </div>
+      <div style="padding:44px 56px;border-right:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#8B93A0;">사용성 · 편의성</div>
+        <div style="margin-top:24px;font-size:112px;font-weight:700;line-height:0.9;letter-spacing:-0.045em;color:#3D4451;font-variant-numeric:tabular-nums;">4.05</div>
+      </div>
+      <div style="padding:44px 0 0 56px;">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#8B93A0;">주변 추천의향</div>
+        <div data-a="pop" style="margin-top:24px;font-size:112px;font-weight:700;line-height:0.9;letter-spacing:-0.045em;color:#1A6DD9;font-variant-numeric:tabular-nums;">4.35</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:56px;padding-top:44px;border-top:1px solid #E4E7EC;">
+      <div>
+        <div style="font-size:25px;font-weight:600;letter-spacing:0.06em;color:#1A6DD9;">좋아진 점 · 응답 51,809명</div>
+        <div style="margin-top:20px;font-size:28px;font-weight:500;color:#3D4451;line-height:1.7;">디자인·UI 23.9% · 예매 편의성 14.5% · 직관성 13.0% · SRT 통합 12.1%</div>
+        <div style="margin-top:16px;font-size:25px;font-weight:400;color:#8B93A0;line-height:1.55;">기존 앱보다 좋다 54.7%, 비슷하다 30.1%</div>
+      </div>
+      <div>
+        <div style="font-size:25px;font-weight:600;letter-spacing:0.06em;color:#8B93A0;">불필요한 기능 · 응답 45,854명</div>
+        <div style="margin-top:20px;font-size:28px;font-weight:500;color:#3D4451;line-height:1.7;">메뉴·화면 복잡 6.9% · 여행 연계 서비스 3.1% · 광고·배너 2.0%</div>
+        <div style="margin-top:16px;font-size:25px;font-weight:400;color:#8B93A0;line-height:1.55;">같은 조사 안에서 화면이 복잡하다는 응답이 가장 많았습니다</div>
+      </div>
+    </div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:52px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="스토어 평점" data-screen-label="07" data-speaker-notes="같은 기간 앱스토어 후기 평균은 1점대입니다. 구글 플레이 603건 평균이 1.65점, App Store 누적 평점이 1.4점입니다. 다만 후기는 불만이 있을 때 더 많이 쓰이는 자료입니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:24.14%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>공식 조사와 이용자 평가</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">07 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:160px 120px 130px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:58px;font-weight:700;letter-spacing:-0.03em;">같은 기간 앱스토어 후기 평균은 1점대입니다</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:72px;border-top:1px solid #E4E7EC;">
+      <div style="padding:48px 56px 0 0;border-right:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#1A6DD9;">구글 플레이 · 이번 표본</div>
+        <div data-a="pop" style="margin-top:26px;font-size:118px;font-weight:700;line-height:0.9;letter-spacing:-0.045em;color:#1A6DD9;font-variant-numeric:tabular-nums;">1.65</div>
+        <div style="margin-top:26px;font-size:26px;font-weight:400;color:#3D4451;line-height:1.6;">8월 3일 ~ 9월 5일 표시 후기 603건의 평균<br />1점이 438건으로 72.6%</div>
+      </div>
+      <div style="padding:48px 56px;border-right:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#8B93A0;">App Store(iOS) · 누적</div>
+        <div style="margin-top:26px;font-size:118px;font-weight:700;line-height:0.9;letter-spacing:-0.045em;color:#5A6270;font-variant-numeric:tabular-nums;">1.4</div>
+        <div style="margin-top:26px;font-size:26px;font-weight:400;color:#5A6270;line-height:1.6;">9월 6일 한국 iPhone 화면 · 평가 889개<br />이번 달만의 점수가 아닌 누적값</div>
+      </div>
+      <div style="padding:48px 0 0 56px;">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#8B93A0;">구글 플레이 · 누적 표시</div>
+        <div style="margin-top:26px;font-size:118px;font-weight:700;line-height:0.9;letter-spacing:-0.045em;color:#C3C8D0;font-variant-numeric:tabular-nums;">3.5</div>
+        <div style="margin-top:26px;font-size:26px;font-weight:400;color:#5A6270;line-height:1.6;">9월 6일 한국·휴대전화 화면<br />이전 코레일톡 평가를 포함할 수 있음</div>
+      </div>
+    </div>
+    <div data-a="rise" data-d="5" style="margin-top:64px;padding-top:36px;border-top:1px solid #E4E7EC;font-size:28px;font-weight:400;color:#5A6270;line-height:1.6;"><strong style="font-weight:600;color:#14171C;">후기는 불만이 있을 때 더 많이 쓰입니다.</strong> 이 숫자를 전체 이용자의 만족도로 볼 수 없습니다. 다만 어떤 문제가 반복되는지를 보는 자료로는 쓸 수 있습니다.</div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:52px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="조사 결과 차이" data-screen-label="08" data-speaker-notes="공식 조사와 SNS 설문의 결과가 다릅니다. 두 조사는 모집 방법과 문항, 척도가 달라 점수를 합치지 않았습니다. 같은 문제가 반복되는지만 확인했습니다." style="background:#F6F7F9;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:27.59%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>공식 조사와 이용자 평가</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">08 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:148px 120px 116px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:58px;font-weight:700;letter-spacing:-0.03em;">공식 조사와 SNS 설문의 결과가 다릅니다</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:56px;">
+      <div style="background:#FFFFFF;padding:44px 48px;">
+        <div style="font-size:25px;font-weight:600;letter-spacing:0.06em;color:#8B93A0;">공식 만족도 조사 · 70,768명</div>
+        <div style="margin-top:26px;display:flex;align-items:baseline;gap:20px;">
+          <div style="font-size:104px;font-weight:700;line-height:0.9;letter-spacing:-0.045em;color:#3D4451;font-variant-numeric:tabular-nums;">4.05</div>
+          <div style="font-size:28px;font-weight:500;color:#5A6270;">사용성 · 편의성 · 5점 척도</div>
+        </div>
+        <div style="margin-top:28px;font-size:28px;font-weight:500;color:#3D4451;line-height:1.6;">기존 앱보다 좋다 54.7%, 비슷하다 30.1%였습니다.</div>
+        <div style="margin-top:28px;padding-top:24px;border-top:1px solid #E4E7EC;font-size:26px;font-weight:400;color:#5A6270;line-height:1.6;">자료에는 연령대별 만족도의 순서만 적혀 있습니다. 10대가 가장 높고 20~30대가 가장 낮은 순서인데, 연령별 점수는 없어 차이의 크기를 알 수 없습니다.</div>
+      </div>
+      <div style="background:#FFFFFF;padding:44px 48px;">
+        <div style="font-size:25px;font-weight:600;letter-spacing:0.06em;color:#1A6DD9;">SNS 설문 · 1,026명</div>
+        <div data-a="pop" style="margin-top:26px;display:flex;align-items:baseline;gap:20px;">
+          <div style="font-size:104px;font-weight:700;line-height:0.9;letter-spacing:-0.045em;color:#1A6DD9;font-variant-numeric:tabular-nums;">2.7</div>
+          <div style="font-size:28px;font-weight:500;color:#5A6270;">참여자가 남긴 만족도</div>
+        </div>
+        <div style="margin-top:28px;font-size:28px;font-weight:500;color:#3D4451;line-height:1.6;">참여자의 89.3%가 18~34세입니다. 이 숫자는 설문에 참여한 비율이며 만족도가 아닙니다.</div>
+        <div style="margin-top:28px;padding-top:24px;border-top:1px solid #E4E7EC;font-size:26px;font-weight:400;color:#5A6270;line-height:1.6;">앱으로만 예매하고 이용 빈도가 높은 연령대의 평가가 낮다는 사실은 앱 자체를 살펴볼 근거가 됩니다.</div>
+      </div>
+    </div>
+    <div data-a="rise" data-d="5" style="margin-top:52px;font-size:30px;font-weight:600;color:#14171C;letter-spacing:-0.015em;line-height:1.5;">어느 조사가 틀렸다고 판단할 근거는 없습니다. 모집 방법과 문항, 척도가 달라 점수를 더하거나 평균 내지 않았고, 같은 문제가 반복되는지만 확인했습니다.</div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:48px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="설문 개요" data-screen-label="09" data-speaker-notes="SNS 설문에는 1,026명이 참여했습니다. 남성 59.6퍼센트, 여성 40.4퍼센트이고 18~34세가 89.3퍼센트입니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:31.03%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>SNS 설문</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">09 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:148px 120px 116px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:58px;font-weight:700;letter-spacing:-0.03em;">SNS 설문에는 1,026명이 참여했습니다</h2>
+    <div style="margin-top:20px;font-size:28px;font-weight:400;color:#5A6270;letter-spacing:-0.01em;">9월 4일 게시 · 만족도와 개선 의견을 함께 받음</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:60px;border-top:1px solid #E4E7EC;">
+      <div style="padding:48px 56px 0 0;border-right:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#8B93A0;">참여</div>
+        <div data-a="pop" style="margin-top:26px;font-size:104px;font-weight:700;line-height:0.9;letter-spacing:-0.045em;color:#1A6DD9;font-variant-numeric:tabular-nums;">1,026</div>
+        <div style="margin-top:26px;font-size:27px;font-weight:400;color:#5A6270;line-height:1.6;">만족도 응답자 수<br />참여자가 남긴 만족도는 2.7점</div>
+      </div>
+      <div style="padding:48px 56px;border-right:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#8B93A0;">성별</div>
+        <div style="margin-top:26px;display:flex;align-items:center;gap:32px;">
+          <div style="position:relative;width:210px;height:210px;border-radius:50%;background:conic-gradient(#1A6DD9 0 59.6%, #D8DEE7 59.6% 100%);"><div style="position:absolute;inset:38px;border-radius:50%;background:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;"><div style="font-size:44px;font-weight:700;letter-spacing:-0.03em;color:#1A6DD9;font-variant-numeric:tabular-nums;">59.6%</div></div></div>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div style="display:flex;align-items:center;gap:14px;"><div style="width:16px;height:16px;background:#1A6DD9;"></div><div style="font-size:27px;font-weight:600;color:#3D4451;">남성 59.6%</div></div>
+            <div style="display:flex;align-items:center;gap:14px;"><div style="width:16px;height:16px;background:#D8DEE7;"></div><div style="font-size:27px;font-weight:600;color:#3D4451;">여성 40.4%</div></div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:48px 0 0 56px;">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#8B93A0;">연령 · 18~34세 비중</div>
+        <div style="margin-top:26px;display:flex;align-items:center;gap:32px;">
+          <div style="position:relative;width:210px;height:210px;border-radius:50%;background:conic-gradient(#1A6DD9 0 89.3%, #D8DEE7 89.3% 100%);"><div style="position:absolute;inset:38px;border-radius:50%;background:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;"><div style="font-size:44px;font-weight:700;letter-spacing:-0.03em;color:#1A6DD9;font-variant-numeric:tabular-nums;">89.3%</div></div></div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="font-size:26px;font-weight:600;color:#3D4451;">18~24세 46.2%</div>
+            <div style="font-size:26px;font-weight:600;color:#3D4451;">25~34세 43.1%</div>
+            <div style="font-size:26px;font-weight:500;color:#8B93A0;">35~44세 6.5%</div>
+            <div style="font-size:26px;font-weight:500;color:#8B93A0;">45~54세 3.7%</div>
+            <div style="font-size:26px;font-weight:500;color:#8B93A0;">55~64세 0.5%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-a="rise" data-d="5" style="margin-top:52px;padding-top:36px;border-top:1px solid #E4E7EC;font-size:28px;font-weight:400;color:#5A6270;line-height:1.6;"><strong style="font-weight:600;color:#14171C;">이 표본으로 고령층의 경험을 추정할 수 없습니다.</strong> 자발적으로 참여한 응답이고 20대 초반 비중이 높습니다.</div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:48px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="UX UI 비중" data-screen-label="10" data-speaker-notes="UX 의견이 UI 의견보다 두 배 이상 많습니다. UX 16개, UI 7개, 긍정 1개입니다. 응답 기준으로 보면 UX를 담은 응답이 14건, UI를 담은 응답이 6건이고 3건이 겹칩니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:34.48%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>SNS 설문</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">10 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:160px 120px 130px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:58px;font-weight:700;letter-spacing:-0.03em;">UX 의견이 UI 의견보다 두 배 이상 많습니다</h2>
+    <div style="margin-top:20px;font-size:28px;font-weight:400;color:#5A6270;letter-spacing:-0.01em;">서술형 설문 응답자 분석</div>
+    <div style="display:flex;align-items:center;gap:0;margin-top:64px;">
+      <div style="flex:32;height:22px;background:#1A6DD9;"><div data-a="bar" style="width:100%;height:100%;background:#1A6DD9;"></div></div>
+      <div style="flex:14;height:22px;background:#9FC2F1;"></div>
+      <div style="flex:2;height:22px;background:#D8DEE7;"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:32fr 14fr 2fr;gap:0;margin-top:34px;">
+      <div style="padding-right:48px;">
+        <div style="font-size:29px;font-weight:700;letter-spacing:-0.02em;">UX</div>
+        <div style="margin-top:14px;font-size:66px;font-weight:700;line-height:1;letter-spacing:-0.04em;color:#1A6DD9;font-variant-numeric:tabular-nums;">32개</div>
+        <div style="margin-top:18px;font-size:26px;font-weight:400;color:#5A6270;line-height:1.6;">예약을 끝내는 흐름, 기능 접근, 검색, 반복 입력, 성능</div>
+      </div>
+      <div style="padding:0 48px;">
+        <div style="font-size:29px;font-weight:700;letter-spacing:-0.02em;">UI</div>
+        <div style="margin-top:14px;font-size:66px;font-weight:700;line-height:1;letter-spacing:-0.04em;color:#3D4451;font-variant-numeric:tabular-nums;">14개</div>
+        <div style="margin-top:18px;font-size:26px;font-weight:400;color:#5A6270;line-height:1.6;">글자 크기와 굵기, 배치, 정보 묶음, 시각적 구분</div>
+      </div>
+      <div style="padding-left:32px;">
+        <div style="font-size:29px;font-weight:600;letter-spacing:-0.02em;color:#8B93A0;">긍정</div>
+        <div style="margin-top:14px;font-size:66px;font-weight:700;line-height:1;letter-spacing:-0.04em;color:#8B93A0;font-variant-numeric:tabular-nums;">2개</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:72px;padding-top:44px;border-top:1px solid #E4E7EC;">
+      <div style="font-size:27px;font-weight:400;color:#5A6270;line-height:1.65;">응답 단위로 보면 UX를 담은 응답 28건, UI를 담은 응답 12건입니다. (UX와 UI를 함께 담은 응답 6건)</div>
+      <div style="font-size:27px;font-weight:400;color:#5A6270;line-height:1.65;">UI 개선을 긍정적으로 적은 응답도 2개 있었습니다. <strong style="font-weight:600;color:#14171C;">UI가 개선되어도 자주 쓰는 경로가 불편해질 수 있다는 사례입니다.</strong></div>
+    </div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:52px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="범주별 의견" data-screen-label="11" data-speaker-notes="여섯 범주로 나눴습니다. 가장 많은 것은 정보 위계와 구분, 가독성 7개입니다. 그 다음이 추가 단계와 핵심 정보 접근 6개, 검색 조건과 반복 조회 6개입니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:37.93%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>SNS 설문</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">11 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:150px 120px 120px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:58px;font-weight:700;letter-spacing:-0.03em;">여섯 범주로 나눈 의견 내용입니다</h2>
+    <div style="margin-top:44px;display:flex;flex-direction:column;">
+      <div style="display:grid;grid-template-columns:420px 200px 1fr;align-items:center;gap:36px;padding:20px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:29px;font-weight:700;letter-spacing:-0.02em;">UI · 정보 위계와 가독성</div>
+        <div style="display:flex;align-items:center;gap:20px;"><div style="flex:1;height:12px;background:#F0F2F5;"><div data-a="bar" style="width:100%;height:100%;background:#1A6DD9;"></div></div><div style="font-size:27px;font-weight:700;color:#1A6DD9;font-variant-numeric:tabular-nums;">14</div></div>
+        <div style="font-size:26px;font-weight:400;color:#5A6270;line-height:1.5;">좌석 상태와 운임의 글자 크기가 같음 · 전달받은 표를 구분할 수 없음 · 정보 묶음이 겹쳐 보임 · QR이 작게 뜸</div>
+      </div>
+      <div style="display:grid;grid-template-columns:420px 200px 1fr;align-items:center;gap:36px;padding:20px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:29px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">UX · 추가 단계와 정보 접근</div>
+        <div style="display:flex;align-items:center;gap:20px;"><div style="flex:1;height:12px;background:#F0F2F5;"><div data-a="bar" data-d="1" style="width:86%;height:100%;background:#9FC2F1;"></div></div><div style="font-size:27px;font-weight:700;color:#3D4451;font-variant-numeric:tabular-nums;">12</div></div>
+        <div style="font-size:26px;font-weight:400;color:#5A6270;line-height:1.5;">예매 절차가 길어짐 · 정기승차권까지 한 단계 늘어남 · 예매 내역에서 시각과 타는 곳을 바로 볼 수 없음</div>
+      </div>
+      <div style="display:grid;grid-template-columns:420px 200px 1fr;align-items:center;gap:36px;padding:20px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:29px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">UX · 검색 조건과 반복 조회</div>
+        <div style="display:flex;align-items:center;gap:20px;"><div style="flex:1;height:12px;background:#F0F2F5;"><div data-a="bar" data-d="2" style="width:86%;height:100%;background:#9FC2F1;"></div></div><div style="font-size:27px;font-weight:700;color:#3D4451;font-variant-numeric:tabular-nums;">12</div></div>
+        <div style="font-size:26px;font-weight:400;color:#5A6270;line-height:1.5;">예매 가능한 열차만 보기 · 역 단위 즐겨찾기 · 0~24시 시간 선택 · 홈에서 열차 종류 선택 · 인접역 조회 · 다음 정기권 열차</div>
+      </div>
+      <div style="display:grid;grid-template-columns:420px 200px 1fr;align-items:center;gap:36px;padding:20px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:29px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">UX · 왕복 예매</div>
+        <div style="display:flex;align-items:center;gap:20px;"><div style="flex:1;height:12px;background:#F0F2F5;"><div data-a="bar" data-d="3" style="width:29%;height:100%;background:#9FC2F1;"></div></div><div style="font-size:27px;font-weight:700;color:#3D4451;font-variant-numeric:tabular-nums;">4</div></div>
+        <div style="font-size:26px;font-weight:400;color:#5A6270;line-height:1.5;">왕복이 안 되어 편도로 두 번 예매 · 출발역과 도착역, 날짜를 매번 다시 선택</div>
+      </div>
+      <div style="display:grid;grid-template-columns:420px 200px 1fr;align-items:center;gap:36px;padding:20px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:29px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">UX · 타는 곳 정보 누락</div>
+        <div style="display:flex;align-items:center;gap:20px;"><div style="flex:1;height:12px;background:#F0F2F5;"><div data-a="bar" data-d="4" style="width:14%;height:100%;background:#D8DEE7;"></div></div><div style="font-size:27px;font-weight:700;color:#3D4451;font-variant-numeric:tabular-nums;">2</div></div>
+        <div style="font-size:26px;font-weight:400;color:#5A6270;line-height:1.5;">탑승구 위치가 새로고침해도 뜨지 않는 오류</div>
+      </div>
+      <div style="display:grid;grid-template-columns:420px 200px 1fr;align-items:center;gap:36px;padding:20px 0;border-top:1px solid #E4E7EC;border-bottom:1px solid #E4E7EC;">
+        <div style="font-size:29px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">UX · 서버 안정성</div>
+        <div style="display:flex;align-items:center;gap:20px;"><div style="flex:1;height:12px;background:#F0F2F5;"><div data-a="bar" data-d="5" style="width:14%;height:100%;background:#D8DEE7;"></div></div><div style="font-size:27px;font-weight:700;color:#3D4451;font-variant-numeric:tabular-nums;">2</div></div>
+        <div style="font-size:26px;font-weight:400;color:#5A6270;line-height:1.5;">연휴 예매 때 접속이 어렵다는 요청 · 발생 시점은 확인되지 않음</div>
+      </div>
+    </div>
+    <div style="margin-top:32px;font-size:26px;font-weight:400;color:#5A6270;line-height:1.6;">한 응답이 여러 범주에 들어갈 수 있어 범주 건수의 합은 응답 수와 다릅니다. 불편 46개를 범주로 나눈 결과입니다.</div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:46px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="정기권 이용자 의견" data-screen-label="12" data-speaker-notes="가장 자세한 의견은 서울에서 원주까지 KTX 정기승차권으로 통학하는 이용자가 보내왔습니다. 매일 쓰는 사람에게 한 단계가 어떤 뜻인지 보여줍니다." style="background:#0E1A2B;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#FFFFFF;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:rgba(255,255,255,0.14);"><div style="width:41.38%;height:100%;background:#4E92F0;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:rgba(255,255,255,0.64);"><span>SNS 설문</span><span style="font-variant-numeric:tabular-nums;color:rgba(255,255,255,0.58);">12 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:148px 130px 116px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:52px;font-weight:700;letter-spacing:-0.03em;">매일 이용하는 20대 여성 이용자가 보내온 의견입니다</h2>
+    <div style="margin-top:16px;font-size:26px;font-weight:400;color:rgba(255,255,255,0.6);">서울–원주 KTX 정기승차권으로 두 학기째 통학하는 이용자 · SNS 설문 응답</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:40px;padding-top:34px;border-top:1px solid rgba(255,255,255,0.16);">
+      <div>
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#7FB2F5;">UX에 대해</div>
+        <div data-a="rise" data-d="1" style="margin-top:24px;font-size:30px;font-weight:500;line-height:1.65;color:rgba(255,255,255,0.92);">“나의 티켓 → 정기승차권”에 들어가면 바로 승차권이 나왔는데, 이제는 “나의 티켓 → 정기승차권 → 승차권 클릭”으로 한 단계씩 늘었습니다.</div>
+        <div data-a="rise" data-d="2" style="margin-top:22px;font-size:30px;font-weight:500;line-height:1.6;color:rgba(255,255,255,0.92);">“하루 2회 반복하면 한 달에 수십 번 같은 조작을 하게 됩니다.”</div>
+        <div data-a="rise" data-d="3" style="margin-top:22px;font-size:28px;font-weight:400;line-height:1.6;color:rgba(255,255,255,0.72);">정기권으로 탈 수 있는 열차는 정기승차권 화면과 따로 조회해야 하고, 열차를 놓쳤을 때 다음에 탈 수 있는 정기권 열차가 바로 나오지 않아 홈에서 다시 조회해야 합니다.</div>
+      </div>
+      <div>
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#7FB2F5;">UI에 대해</div>
+        <div data-a="rise" data-d="2" style="margin-top:24px;font-size:30px;font-weight:500;line-height:1.65;color:rgba(255,255,255,0.92);">홈에 예매·관광·상품·할인·메뉴가 비슷한 비중으로 있습니다. 과반이 예매만을 위해 앱을 쓰는데 “5%의 기능을 위해 95%의 기능을 지나쳐야” 합니다.</div>
+        <div data-a="rise" data-d="3" style="margin-top:22px;font-size:30px;font-weight:500;line-height:1.6;color:rgba(255,255,255,0.92);">일반실과 특실을 열로 구분해 바로 볼 수 있었는데, 지금은 칸과 행으로 나뉘어 “열차조회 → 열차 클릭 → 일반실·우등실 선택 → 예매”로 한 단계 늘었습니다.</div>
+        <div data-a="rise" data-d="4" style="margin-top:22px;font-size:28px;font-weight:400;line-height:1.6;color:rgba(255,255,255,0.72);">“디지털 격차를 느끼는 세대는 결국 역 창구를 찾아가거나 정기승차권 사용을 포기하게 된다고 생각합니다.”</div>
+      </div>
+    </div>
+    <div data-a="rise" data-d="5" style="margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,255,0.16);font-size:26px;font-weight:500;color:rgba(255,255,255,0.82);line-height:1.55;">한 달에 한두 번 예매하는 사람에게 터치 3~4번은 문제가 아닙니다. 하루 두 번 쓰는 사람에게는 매달 수십 번 반복됩니다. 평균 이용자 기준으로 UX 뎁스만 세면 이 부담이 보이지 않습니다.</div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:52px;left:120px;font-size:24px;font-weight:500;color:rgba(255,255,255,0.62);letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="별점 분포" data-screen-label="13" data-speaker-notes="구글 플레이 후기 603건 가운데 1점이 438건으로 72.6퍼센트입니다. 기간별로 나눠 봐도 평균은 1점대에 머물러 있습니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:44.83%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>공개 후기 분석</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">13 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:160px 120px 130px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:58px;font-weight:700;letter-spacing:-0.03em;">구글 플레이 후기 603건 가운데 1점이 72.6%입니다</h2>
+    <div style="display:grid;grid-template-columns:1.25fr 1fr;gap:72px;margin-top:56px;">
+      <div style="display:flex;flex-direction:column;">
+        <div style="display:grid;grid-template-columns:120px 1fr 200px;align-items:center;gap:32px;padding:22px 0;border-top:1px solid #E4E7EC;">
+          <div style="font-size:29px;font-weight:700;letter-spacing:-0.02em;">1점</div>
+          <div style="height:22px;background:#F0F2F5;"><div data-a="bar" style="width:100%;height:100%;background:#1A6DD9;"></div></div>
+          <div style="font-size:27px;font-weight:700;color:#1A6DD9;text-align:right;font-variant-numeric:tabular-nums;">438건 · 72.6%</div>
+        </div>
+        <div style="display:grid;grid-template-columns:120px 1fr 200px;align-items:center;gap:32px;padding:22px 0;border-top:1px solid #E4E7EC;">
+          <div style="font-size:29px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">2점</div>
+          <div style="height:22px;background:#F0F2F5;"><div data-a="bar" data-d="1" style="width:11.2%;height:100%;background:#9FC2F1;"></div></div>
+          <div style="font-size:27px;font-weight:500;color:#5A6270;text-align:right;font-variant-numeric:tabular-nums;">49건 · 8.1%</div>
+        </div>
+        <div style="display:grid;grid-template-columns:120px 1fr 200px;align-items:center;gap:32px;padding:22px 0;border-top:1px solid #E4E7EC;">
+          <div style="font-size:29px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">3점</div>
+          <div style="height:22px;background:#F0F2F5;"><div data-a="bar" data-d="2" style="width:11.4%;height:100%;background:#9FC2F1;"></div></div>
+          <div style="font-size:27px;font-weight:500;color:#5A6270;text-align:right;font-variant-numeric:tabular-nums;">50건 · 8.3%</div>
+        </div>
+        <div style="display:grid;grid-template-columns:120px 1fr 200px;align-items:center;gap:32px;padding:22px 0;border-top:1px solid #E4E7EC;">
+          <div style="font-size:29px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">4점</div>
+          <div style="height:22px;background:#F0F2F5;"><div data-a="bar" data-d="3" style="width:5%;height:100%;background:#D8DEE7;"></div></div>
+          <div style="font-size:27px;font-weight:500;color:#5A6270;text-align:right;font-variant-numeric:tabular-nums;">22건 · 3.6%</div>
+        </div>
+        <div style="display:grid;grid-template-columns:120px 1fr 200px;align-items:center;gap:32px;padding:22px 0;border-top:1px solid #E4E7EC;border-bottom:1px solid #E4E7EC;">
+          <div style="font-size:29px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">5점</div>
+          <div style="height:22px;background:#F0F2F5;"><div data-a="bar" data-d="4" style="width:10%;height:100%;background:#D8DEE7;"></div></div>
+          <div style="font-size:27px;font-weight:500;color:#5A6270;text-align:right;font-variant-numeric:tabular-nums;">44건 · 7.3%</div>
+        </div>
+        <div style="margin-top:28px;font-size:25px;font-weight:400;color:#8B93A0;line-height:1.55;">최신순으로 660건을 확보한 뒤 출시일 이전 57건을 제외하고 중복을 제거했습니다. 가장 최근 표시일은 9월 5일입니다.</div>
+      </div>
+      <div>
+        <div style="font-size:25px;font-weight:600;letter-spacing:0.06em;color:#8B93A0;">기간별 표본 평균</div>
+        <div style="margin-top:28px;display:flex;flex-direction:column;gap:0;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 0;border-top:1px solid #E4E7EC;">
+            <div style="font-size:28px;font-weight:500;color:#3D4451;">8월 3~13일 · 352건</div>
+            <div style="font-size:40px;font-weight:700;color:#3D4451;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;">1.68</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 0;border-top:1px solid #E4E7EC;">
+            <div style="font-size:28px;font-weight:500;color:#3D4451;">8월 14~31일 · 211건</div>
+            <div style="font-size:40px;font-weight:700;color:#3D4451;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;">1.64</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 0;border-top:1px solid #E4E7EC;border-bottom:1px solid #E4E7EC;">
+            <div style="font-size:28px;font-weight:500;color:#3D4451;">9월 1~5일 · 40건</div>
+            <div style="font-size:40px;font-weight:700;color:#3D4451;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;">1.38</div>
+          </div>
+        </div>
+        <div style="margin-top:32px;font-size:26px;font-weight:400;color:#5A6270;line-height:1.6;"><strong style="font-weight:600;color:#14171C;">이 숫자로 품질이 계속 떨어졌다고 단정할 수 없습니다.</strong> 기간마다 표본 구성이 다르고, 앱 버전과 이용량을 함께 보지 못했습니다. 9월 표본은 40건으로 적습니다.</div>
+      </div>
+    </div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:52px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="범주별 후기" data-screen-label="14" data-speaker-notes="가장 많은 단일 범주는 정보 위계와 가독성, 배치입니다. 189건으로 전체의 31.3퍼센트입니다. 그 다음이 결제와 카드 107건, 로딩과 접속 102건입니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:48.28%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>공개 후기 분석</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">14 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:144px 120px 112px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:54px;font-weight:700;letter-spacing:-0.03em;">가장 많은 범주는 정보 위계와 가독성입니다</h2>
+    <div style="margin-top:16px;font-size:27px;font-weight:400;color:#5A6270;letter-spacing:-0.01em;">구글 플레이 스토어 코레일+ 후기 · 8월 3일~9월 5일 표시 후기 603건 중 불편·개선 요청과 혼합 의견 561건 분류</div>
+    <div style="margin-top:36px;display:flex;flex-direction:column;">
+      <div style="display:grid;grid-template-columns:110px 470px 1fr 220px;align-items:center;gap:28px;padding:12px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:700;color:#1A6DD9;">UI</div>
+        <div style="font-size:28px;font-weight:700;letter-spacing:-0.02em;">정보 위계 · 가독성 · 배치</div>
+        <div style="height:14px;background:#F0F2F5;"><div data-a="bar" style="width:100%;height:100%;background:#1A6DD9;"></div></div>
+        <div style="font-size:26px;font-weight:700;color:#1A6DD9;text-align:right;font-variant-numeric:tabular-nums;">189건 · 31.3%</div>
+      </div>
+      <div style="display:grid;grid-template-columns:110px 470px 1fr 220px;align-items:center;gap:28px;padding:12px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;color:#8B93A0;">UX</div>
+        <div style="font-size:28px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">결제 · 카드 · 할인 · 환급</div>
+        <div style="height:14px;background:#F0F2F5;"><div data-a="bar" data-d="1" style="width:57%;height:100%;background:#9FC2F1;"></div></div>
+        <div style="font-size:26px;font-weight:500;color:#5A6270;text-align:right;font-variant-numeric:tabular-nums;">107건 · 17.7%</div>
+      </div>
+      <div style="display:grid;grid-template-columns:110px 470px 1fr 220px;align-items:center;gap:28px;padding:12px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;color:#8B93A0;">UX</div>
+        <div style="font-size:28px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">로딩 · 접속 · 안정성</div>
+        <div style="height:14px;background:#F0F2F5;"><div data-a="bar" data-d="1" style="width:54%;height:100%;background:#9FC2F1;"></div></div>
+        <div style="font-size:26px;font-weight:500;color:#5A6270;text-align:right;font-variant-numeric:tabular-nums;">102건 · 16.9%</div>
+      </div>
+      <div style="display:grid;grid-template-columns:110px 470px 1fr 220px;align-items:center;gap:28px;padding:12px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;color:#8B93A0;">UX</div>
+        <div style="font-size:28px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">예매 · 좌석 선택 · 왕복</div>
+        <div style="height:14px;background:#F0F2F5;"><div data-a="bar" data-d="2" style="width:50%;height:100%;background:#9FC2F1;"></div></div>
+        <div style="font-size:26px;font-weight:500;color:#5A6270;text-align:right;font-variant-numeric:tabular-nums;">95건 · 15.8%</div>
+      </div>
+      <div style="display:grid;grid-template-columns:110px 470px 1fr 220px;align-items:center;gap:28px;padding:12px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;color:#8B93A0;">UX</div>
+        <div style="font-size:28px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">승차권 확인 · 전달 · 탑승 정보</div>
+        <div style="height:14px;background:#F0F2F5;"><div data-a="bar" data-d="2" style="width:48%;height:100%;background:#9FC2F1;"></div></div>
+        <div style="font-size:26px;font-weight:500;color:#5A6270;text-align:right;font-variant-numeric:tabular-nums;">91건 · 15.1%</div>
+      </div>
+      <div style="display:grid;grid-template-columns:110px 470px 1fr 220px;align-items:center;gap:28px;padding:12px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;color:#8B93A0;">UX</div>
+        <div style="font-size:28px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">메뉴 탐색 · 추가 조작</div>
+        <div style="height:14px;background:#F0F2F5;"><div data-a="bar" data-d="3" style="width:46%;height:100%;background:#9FC2F1;"></div></div>
+        <div style="font-size:26px;font-weight:500;color:#5A6270;text-align:right;font-variant-numeric:tabular-nums;">86건 · 14.3%</div>
+      </div>
+      <div style="display:grid;grid-template-columns:110px 470px 1fr 220px;align-items:center;gap:28px;padding:12px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;color:#8B93A0;">UX</div>
+        <div style="font-size:28px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">가입 · 로그인 · 인증</div>
+        <div style="height:14px;background:#F0F2F5;"><div data-a="bar" data-d="3" style="width:34%;height:100%;background:#9FC2F1;"></div></div>
+        <div style="font-size:26px;font-weight:500;color:#5A6270;text-align:right;font-variant-numeric:tabular-nums;">65건 · 10.8%</div>
+      </div>
+      <div style="display:grid;grid-template-columns:110px 470px 1fr 220px;align-items:center;gap:28px;padding:12px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;color:#8B93A0;">UX</div>
+        <div style="font-size:28px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">검색 조건 · 상태 유지</div>
+        <div style="height:14px;background:#F0F2F5;"><div data-a="bar" data-d="4" style="width:26%;height:100%;background:#D8DEE7;"></div></div>
+        <div style="font-size:26px;font-weight:500;color:#5A6270;text-align:right;font-variant-numeric:tabular-nums;">49건 · 8.1%</div>
+      </div>
+      <div style="display:grid;grid-template-columns:110px 470px 1fr 220px;align-items:center;gap:28px;padding:12px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;color:#8B93A0;">UX</div>
+        <div style="font-size:28px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">승차권 변경 · 취소</div>
+        <div style="height:14px;background:#F0F2F5;"><div data-a="bar" data-d="4" style="width:10%;height:100%;background:#D8DEE7;"></div></div>
+        <div style="font-size:26px;font-weight:500;color:#5A6270;text-align:right;font-variant-numeric:tabular-nums;">19건 · 3.2%</div>
+      </div>
+      <div style="display:grid;grid-template-columns:110px 470px 1fr 220px;align-items:center;gap:28px;padding:12px 0;border-top:1px solid #E4E7EC;border-bottom:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;color:#8B93A0;">UI</div>
+        <div style="font-size:28px;font-weight:600;letter-spacing:-0.02em;color:#3D4451;">용어 · 안내 문구</div>
+        <div style="height:14px;background:#F0F2F5;"><div data-a="bar" data-d="5" style="width:5%;height:100%;background:#D8DEE7;"></div></div>
+        <div style="font-size:26px;font-weight:500;color:#5A6270;text-align:right;font-variant-numeric:tabular-nums;">9건 · 1.5%</div>
+      </div>
+    </div>
+    <div style="margin-top:26px;font-size:26px;font-weight:400;color:#5A6270;line-height:1.55;">UX 문제를 담은 후기가 414건, UI 문제를 담은 후기가 195건이고 106건이 겹칩니다. <strong style="font-weight:600;color:#14171C;">건수가 적어도 돈과 탑승에 닿는 문제는 순서를 앞에 둬야 합니다.</strong></div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:44px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="별점과 내용" data-screen-label="15" data-speaker-notes="별점이 높은 후기에도 불편이 담겨 있습니다. 4점과 5점 후기 66건 가운데 35건에 개선 요청이 함께 있었습니다. 별점만으로 분류하면 이 의견을 놓칩니다." style="background:#F6F7F9;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#E1E4E9;"><div style="width:51.72%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>공개 후기 분석</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">15 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:160px 120px 130px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:58px;font-weight:700;letter-spacing:-0.03em;">별점이 높은 후기에도 불편이 담겨 있습니다</h2>
+    <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:56px;margin-top:56px;">
+      <div style="background:#FFFFFF;padding:48px 52px;">
+        <div style="font-size:25px;font-weight:600;letter-spacing:0.06em;color:#8B93A0;">4~5점 후기 66건 중</div>
+        <div data-a="pop" style="margin-top:24px;font-size:126px;font-weight:700;line-height:0.9;letter-spacing:-0.045em;color:#1A6DD9;font-variant-numeric:tabular-nums;">35건</div>
+        <div style="margin-top:24px;font-size:28px;font-weight:500;color:#3D4451;line-height:1.6;">별점은 높지만 본문에 불편이나 개선 요청이 함께 담겨 있었습니다.</div>
+        <div style="margin-top:32px;padding-top:28px;border-top:1px solid #E4E7EC;font-size:26px;font-weight:400;color:#5A6270;line-height:1.6;">별점만으로 긍정과 부정을 자동 분류하면 이 35건을 놓칩니다. 본문 판독 결과는 불편·개선 요청 544건, 긍정과 개선이 섞인 의견 17건, 긍정 25건입니다.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;">
+        <div style="font-size:25px;font-weight:600;letter-spacing:0.06em;color:#1A6DD9;">원문을 다시 대조해 확인한 세부 건수</div>
+        <div style="margin-top:26px;display:flex;flex-direction:column;">
+          <div style="display:grid;grid-template-columns:1fr 150px;align-items:baseline;gap:32px;padding:26px 0;border-top:1px solid #D5D9DF;">
+            <div><div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">왕복 예매가 없거나 찾기 어렵다</div><div style="margin-top:10px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.5;">여행상품의 돌아오는 승차권 표시 문제 1건은 제외</div></div>
+            <div style="font-size:44px;font-weight:700;color:#1A6DD9;text-align:right;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;">39건</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 150px;align-items:baseline;gap:32px;padding:26px 0;border-top:1px solid #D5D9DF;">
+            <div><div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">법인카드 관련 불편</div><div style="margin-top:10px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.5;">개인·법인 입력 항목과 저장 카드가 맞지 않는다는 신고</div></div>
+            <div style="font-size:44px;font-weight:700;color:#3D4451;text-align:right;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;">29건</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 150px;align-items:baseline;gap:32px;padding:26px 0;border-top:1px solid #D5D9DF;border-bottom:1px solid #D5D9DF;">
+            <div><div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">선택 약관에 동의하지 않으면 가입이 막힌다</div><div style="margin-top:10px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.5;">표시일이 모두 9월 1~5일 · 최신 버전에서 다시 나타나는지 즉시 확인 필요</div></div>
+            <div data-a="pop" data-d="3" style="font-size:44px;font-weight:700;color:#1A6DD9;text-align:right;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;">7건</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:52px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="App Store 후기와 언론 보도" data-screen-label="16" data-speaker-notes="App Store(iOS) 후기와 언론 보도에서도 같은 문제가 나옵니다. 다만 이용자가 겹치는지 알 수 없어 플랫폼을 합산한 비율은 계산하지 않았습니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:55.17%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>공개 후기 분석</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">16 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:148px 120px 116px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:58px;font-weight:700;letter-spacing:-0.03em;">App Store(iOS) 후기와 언론 보도에서도 같은 문제가 나옵니다</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:52px;">
+      <div>
+        <div style="font-size:25px;font-weight:600;letter-spacing:0.06em;color:#1A6DD9;">App Store(iOS) 공개 후기 10건 · 8월 5~24일 표시</div>
+        <div style="margin-top:20px;font-size:27px;font-weight:400;color:#3D4451;line-height:1.6;">로그인 반복 요구, 전달받은 승차권 확인 실패, 왕복 예매, 타는 곳 정보, 좌석 상태 구분, 검색 결과 초기화, 추가 선택 단계가 반복됐습니다.</div>
+        <div style="margin-top:20px;font-size:27px;font-weight:400;color:#3D4451;line-height:1.6;">큰 글씨 모드가 홈 화면에만 적용되고 하위 메뉴는 그대로라는 후기에는 8월 7일 개발사 답변이 달렸습니다. 입력칸 이동과 키보드 조작, 날짜·요일 표기 문제도 있었습니다.</div>
+      </div>
+      <div>
+        <div style="font-size:25px;font-weight:600;letter-spacing:0.06em;color:#1A6DD9;">언론 보도</div>
+        <div style="margin-top:24px;display:flex;flex-direction:column;">
+          <div style="padding:18px 0;border-top:1px solid #E4E7EC;">
+            <div style="font-size:26px;font-weight:700;color:#1A6DD9;">쿠키뉴스 · 8월 20일</div>
+            <div style="margin-top:12px;font-size:27px;font-weight:400;color:#3D4451;line-height:1.6;">한 화면 정보가 늘어 가독성이 떨어졌고, 통합 대상인 SRT도 별도 설정을 해야 조회된다고 지적했습니다. 코레일은 사전 등록한 교통약자의 할인은 로그인 후 자동 반영된다고 설명했습니다.</div>
+          </div>
+          <div style="padding:18px 0;border-top:1px solid #E4E7EC;">
+            <div style="font-size:26px;font-weight:700;color:#1A6DD9;">비즈워치 · 8월 13일</div>
+            <div style="margin-top:12px;font-size:27px;font-weight:400;color:#3D4451;line-height:1.6;">코레일은 예매 절차를 7단계에서 4단계로 줄였다고 설명했습니다. 같은 기사에서 외국어 설정 뒤 공지와 팝업의 언어가 섞이는 사례를 확인했고, 외국인 전용 앱은 출시되지 않았습니다.</div>
+          </div>
+          <div style="padding:18px 0;border-top:1px solid #E4E7EC;border-bottom:1px solid #E4E7EC;">
+            <div style="font-size:26px;font-weight:700;color:#8B93A0;">대구일보 · 8월 3일</div>
+            <div style="margin-top:12px;font-size:27px;font-weight:400;color:#3D4451;line-height:1.6;">핵심 기능을 아이콘으로 배치해 시각적으로 편해졌다고 평가했습니다.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:48px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="원인 분류" data-screen-label="17" data-speaker-notes="용어보다 경로와 정보 위계 문제가 많습니다. 용어 관련 후기는 603건 중 9건입니다. 용어만 고쳐서는 나머지 원인이 해결되지 않습니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:58.62%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>원인 분류</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">17 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:144px 120px 112px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:56px;font-weight:700;letter-spacing:-0.03em;">용어보다 경로와 정보 위계 문제가 많습니다</h2>
+    <div style="margin-top:26px;display:flex;flex-direction:column;">
+      <div style="display:grid;grid-template-columns:400px 1fr 1fr;gap:36px;padding:0 0 12px;border-bottom:1px solid #14171C;font-size:24px;font-weight:600;letter-spacing:0.06em;color:#8B93A0;">
+        <div>원인</div><div>이용자가 겪는 문제</div><div>필요한 변경</div>
+      </div>
+      <div style="display:grid;grid-template-columns:400px 1fr 1fr;align-items:baseline;gap:36px;padding:15px 0;border-bottom:1px solid #E4E7EC;">
+        <div style="font-size:27px;font-weight:700;letter-spacing:-0.02em;">용어가 실제 행동을 설명하지 못함</div>
+        <div style="font-size:25px;font-weight:400;color:#5A6270;line-height:1.5;">‘수정’을 눌렀을 때 좌석 유형 선택이 나오는 것을 예상하지 못함</div>
+        <div style="font-size:25px;font-weight:400;color:#3D4451;line-height:1.5;">‘좌석 유형’처럼 목적을 그대로 쓴 라벨과 현재 선택 상태 표시</div>
+      </div>
+      <div style="display:grid;grid-template-columns:400px 1fr 1fr;align-items:baseline;gap:36px;padding:15px 0;border-bottom:1px solid #E4E7EC;">
+        <div style="font-size:27px;font-weight:700;letter-spacing:-0.02em;">분류가 이용 목적과 어긋남</div>
+        <div style="font-size:25px;font-weight:400;color:#5A6270;line-height:1.5;">임산부 할인 등을 ‘특가상품’ 안에서 찾기 어려움</div>
+        <div style="font-size:25px;font-weight:400;color:#3D4451;line-height:1.5;">검색과 인원 선택 단계에서 할인 대상을 만날 수 있게 배치</div>
+      </div>
+      <div style="display:grid;grid-template-columns:400px 1fr 1fr;align-items:baseline;gap:36px;padding:15px 0;border-bottom:1px solid #E4E7EC;">
+        <div style="font-size:27px;font-weight:700;letter-spacing:-0.02em;">닫기와 취소가 구분되지 않음</div>
+        <div style="font-size:25px;font-weight:400;color:#5A6270;line-height:1.5;">X를 누르면 창만 닫히는지 예약이 취소되는지 알 수 없음</div>
+        <div style="font-size:25px;font-weight:400;color:#3D4451;line-height:1.5;">‘화면 닫기’와 ‘예약 취소’를 분리하고 취소 대상과 결과를 적음</div>
+      </div>
+      <div style="display:grid;grid-template-columns:400px 1fr 1fr;align-items:baseline;gap:36px;padding:15px 0;border-bottom:1px solid #E4E7EC;background:#F2F6FD;">
+        <div style="font-size:27px;font-weight:700;letter-spacing:-0.02em;color:#1A6DD9;">핵심 경로에 조작이 늘어남</div>
+        <div style="font-size:25px;font-weight:400;color:#3D4451;line-height:1.5;">간편예매에서 구간을 다시 고르고, 좌석 등급 선택으로 한 번 더 들어감</div>
+        <div style="font-size:25px;font-weight:400;color:#3D4451;line-height:1.5;">저장한 조건 유지, 목록에서 열차와 등급을 바로 선택, 주요 기능 바로가기</div>
+      </div>
+      <div style="display:grid;grid-template-columns:400px 1fr 1fr;align-items:baseline;gap:36px;padding:15px 0;border-bottom:1px solid #E4E7EC;background:#F2F6FD;">
+        <div style="font-size:27px;font-weight:700;letter-spacing:-0.02em;color:#1A6DD9;">검색 상태를 잃음</div>
+        <div style="font-size:25px;font-weight:400;color:#3D4451;line-height:1.5;">예약대기를 신청한 뒤 날짜와 시간을 처음부터 다시 입력</div>
+        <div style="font-size:25px;font-weight:400;color:#3D4451;line-height:1.5;">목록 위치와 필터, 날짜를 유지하고 이용자가 지울 때만 초기화</div>
+      </div>
+      <div style="display:grid;grid-template-columns:400px 1fr 1fr;align-items:baseline;gap:36px;padding:15px 0;border-bottom:1px solid #E4E7EC;background:#F2F6FD;">
+        <div style="font-size:27px;font-weight:700;letter-spacing:-0.02em;color:#1A6DD9;">시각 위계가 목적과 어긋남</div>
+        <div style="font-size:25px;font-weight:400;color:#3D4451;line-height:1.5;">매진·잔여석·입석과 운임을 나란히 비교하지 못함</div>
+        <div style="font-size:25px;font-weight:400;color:#3D4451;line-height:1.5;">출발·도착 시각, 운임, 예매 가능 상태를 중심으로 열차 목록 재구성</div>
+      </div>
+      <div style="display:grid;grid-template-columns:400px 1fr 1fr;align-items:baseline;gap:36px;padding:15px 0;border-bottom:1px solid #E4E7EC;">
+        <div style="font-size:27px;font-weight:700;letter-spacing:-0.02em;">계정·결제·승차권 상태가 어긋남</div>
+        <div style="font-size:25px;font-weight:400;color:#5A6270;line-height:1.5;">외부 결제 후 발권 실패, 변경 후 할인 소실, 전달받은 표 확인 실패</div>
+        <div style="font-size:25px;font-weight:400;color:#3D4451;line-height:1.5;">상태를 맞추고 실패를 복구. 결제 수단과 상품 조합별로 검수</div>
+      </div>
+    </div>
+    <div style="margin-top:14px;font-size:26px;font-weight:600;color:#14171C;letter-spacing:-0.015em;line-height:1.5;">용어 관련 후기는 603건 중 9건입니다. 이름을 바꿔도 구간을 매번 골라야 하면 조작 부담은 그대로 남습니다.</div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:44px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="늘어난 조작" data-screen-label="18" data-speaker-notes="단계가 줄었다는 설명과 늘어난 조작이 함께 있습니다. 처음 예매하는 사람의 단계는 줄었고, 매일 반복하는 경로에서는 단계가 늘었습니다." style="background:#F6F7F9;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#E1E4E9;"><div style="width:62.07%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>원인 분류</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">18 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:148px 120px 116px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:56px;font-weight:700;letter-spacing:-0.03em;">단계가 줄었다는 설명과 늘어난 조작이 함께 있습니다</h2>
+    <div style="margin-top:20px;font-size:27px;font-weight:400;color:#5A6270;letter-spacing:-0.01em;">코레일은 예매 절차를 7단계에서 4단계로 줄였다고 설명했습니다(비즈워치 8월 13일). 이용자가 말한 변화는 아래와 같습니다.</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;">
+      <div style="background:#FFFFFF;padding:40px 44px;">
+        <div style="font-size:25px;font-weight:600;letter-spacing:0.06em;color:#8B93A0;">정기승차권 확인</div>
+        <div style="margin-top:26px;font-size:26px;font-weight:400;color:#8B93A0;line-height:1.55;">개편 전</div>
+        <div style="margin-top:8px;font-size:29px;font-weight:600;color:#3D4451;line-height:1.5;">나의 티켓 → 정기승차권</div>
+        <div data-a="rise" data-d="1" style="margin-top:26px;font-size:26px;font-weight:400;color:#1A6DD9;line-height:1.55;">지금</div>
+        <div data-a="rise" data-d="1" style="margin-top:8px;font-size:29px;font-weight:700;color:#1A6DD9;line-height:1.5;">나의 티켓 → 정기승차권 → 승차권 클릭</div>
+        <div style="margin-top:26px;padding-top:22px;border-top:1px solid #E4E7EC;font-size:25px;font-weight:400;color:#5A6270;line-height:1.55;">하루 두 번 쓰면 매달 수십 번 반복됩니다</div>
+      </div>
+      <div style="background:#FFFFFF;padding:40px 44px;">
+        <div style="font-size:25px;font-weight:600;letter-spacing:0.06em;color:#8B93A0;">좌석 등급 선택</div>
+        <div style="margin-top:26px;font-size:26px;font-weight:400;color:#8B93A0;line-height:1.55;">개편 전</div>
+        <div style="margin-top:8px;font-size:29px;font-weight:600;color:#3D4451;line-height:1.5;">열차조회 → 일반실 예매</div>
+        <div data-a="rise" data-d="2" style="margin-top:26px;font-size:26px;font-weight:400;color:#1A6DD9;line-height:1.55;">지금</div>
+        <div data-a="rise" data-d="2" style="margin-top:8px;font-size:29px;font-weight:700;color:#1A6DD9;line-height:1.5;">열차조회 → 열차 선택 → 일반실·우등실 선택 → 예매</div>
+        <div style="margin-top:26px;padding-top:22px;border-top:1px solid #E4E7EC;font-size:25px;font-weight:400;color:#5A6270;line-height:1.55;">일반실과 특실이 열에서 칸·행으로 바뀌었습니다</div>
+      </div>
+      <div style="background:#FFFFFF;padding:40px 44px;">
+        <div style="font-size:25px;font-weight:600;letter-spacing:0.06em;color:#8B93A0;">타는 곳 확인</div>
+        <div style="margin-top:26px;font-size:26px;font-weight:400;color:#8B93A0;line-height:1.55;">개편 전</div>
+        <div style="margin-top:8px;font-size:29px;font-weight:600;color:#3D4451;line-height:1.5;">예매 내역에서 시각과 탑승 게이트를 함께 확인</div>
+        <div data-a="rise" data-d="3" style="margin-top:26px;font-size:26px;font-weight:400;color:#1A6DD9;line-height:1.55;">지금</div>
+        <div data-a="rise" data-d="3" style="margin-top:8px;font-size:29px;font-weight:700;color:#1A6DD9;line-height:1.5;">예매 내역에서 바로 조회되지 않아 다른 화면으로 이동</div>
+        <div style="margin-top:26px;padding-top:22px;border-top:1px solid #E4E7EC;font-size:25px;font-weight:400;color:#5A6270;line-height:1.55;">출퇴근 이용자가 가장 자주 여는 정보입니다</div>
+      </div>
+    </div>
+    <div data-a="rise" data-d="5" style="margin-top:34px;padding-top:26px;border-top:1px solid #D5D9DF;font-size:29px;font-weight:600;color:#14171C;letter-spacing:-0.015em;line-height:1.5;">처음 예매하는 사람의 단계는 줄었고, 매일 반복하는 경로에서는 늘었습니다. 단계 수를 셀 때는 어떤 시나리오를 기준으로 했는지 함께 밝혀야 합니다.</div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:48px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="호환성과 접근성" data-screen-label="19" data-speaker-notes="큰 글씨, 외국어, 기기별 화면 검수가 덜 됐습니다. 큰 글씨 모드는 홈 화면만 바뀌었고, 외국어 설정에서는 언어가 섞이고, App Store(iOS) 평점이 더 낮습니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:65.52%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>원인 분류</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">19 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:160px 120px 130px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:58px;font-weight:700;letter-spacing:-0.03em;">큰 글씨·외국어·기기별 화면 검수가 덜 됐습니다</h2>
+    <div style="margin-top:40px;display:flex;flex-direction:column;">
+      <div style="display:grid;grid-template-columns:300px 1fr 1fr;align-items:baseline;gap:44px;padding:28px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">큰 글씨 모드</div>
+        <div style="font-size:27px;font-weight:400;color:#5A6270;line-height:1.55;">홈 화면만 바뀌고 하위 메뉴는 그대로라는 후기가 있습니다. 8월 7일 개발사 답변이 달렸습니다.</div>
+        <div style="font-size:27px;font-weight:400;color:#3D4451;line-height:1.55;">큰 글씨에서도 예매·변경·결제의 핵심 정보가 남는지 확인해야 합니다. 고령자를 위한 기능인데 홈만 바뀌어서는 도움이 되지 않습니다.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:300px 1fr 1fr;align-items:baseline;gap:44px;padding:28px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">외국어</div>
+        <div style="font-size:27px;font-weight:400;color:#5A6270;line-height:1.55;">설정을 바꾼 뒤 공지와 팝업의 언어가 섞이는 사례가 확인됐습니다. 외국인 전용 앱은 출시되지 않았습니다.</div>
+        <div style="font-size:27px;font-weight:400;color:#3D4451;line-height:1.55;">외국어 설정에서 결제·변경·취소까지 끝까지 진행되는지 검수해야 합니다.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:300px 1fr 1fr;align-items:baseline;gap:44px;padding:28px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">기기와 화면</div>
+        <div style="font-size:27px;font-weight:400;color:#5A6270;line-height:1.55;">하단 시스템 영역과 버튼이 겹치고, 입력칸 이동과 키보드 조작이 불편하다는 후기가 있습니다.</div>
+        <div style="font-size:27px;font-weight:400;color:#3D4451;line-height:1.55;">작은 화면과 폴더블에서 버튼이 가려지지 않는지 실제 기기로 확인해야 합니다.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:300px 1fr 1fr;align-items:baseline;gap:44px;padding:28px 0;border-top:1px solid #E4E7EC;border-bottom:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">운영체제</div>
+        <div style="font-size:27px;font-weight:400;color:#5A6270;line-height:1.55;">App Store(iOS) 누적 평점 1.4점, 구글 플레이 누적 표시 3.5점입니다. 표시 조건이 달라 직접 비교하기는 어렵습니다.</div>
+        <div style="font-size:27px;font-weight:400;color:#3D4451;line-height:1.55;">플랫폼별 검수 기록과 통과 기준을 확인해야 합니다.</div>
+      </div>
+    </div>
+    <div data-a="rise" data-d="5" style="margin-top:32px;font-size:29px;font-weight:600;color:#14171C;letter-spacing:-0.015em;line-height:1.45;">저시력 이용자와 스크린리더 이용자가 도움 없이 예매와 취소를 끝낼 수 있는지는 아직 확인되지 않았습니다.</div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:52px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="오류 조치율" data-speaker-notes="접수된 오류 61건 중 60건을 고쳤습니다. 98.4퍼센트입니다. 다만 이 수치는 접수된 오류를 고쳤다는 뜻이고, 사용성이 개선된 비율은 아닙니다." data-screen-label="20" style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:68.97%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>원인 분류</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">20 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:160px 120px 130px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:56px;font-weight:700;letter-spacing:-0.03em;">오류 98.4%를 조치했다는 수치는 사용성 개선율이 아닙니다</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:60px;border-top:1px solid #E4E7EC;">
+      <div style="padding:40px 44px 0 0;border-right:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#8B93A0;">접수 · 중복 포함</div>
+        <div style="margin-top:20px;font-size:88px;font-weight:700;line-height:0.9;letter-spacing:-0.045em;color:#3D4451;font-variant-numeric:tabular-nums;">252건</div>
+        <div style="margin-top:18px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.55;">고객센터 36 · VOC와 국민신문고 201 · 자체 점검 15</div>
+      </div>
+      <div style="padding:40px 44px;border-right:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#8B93A0;">중복 제외 오류</div>
+        <div style="margin-top:20px;font-size:88px;font-weight:700;line-height:0.9;letter-spacing:-0.045em;color:#3D4451;font-variant-numeric:tabular-nums;">61건</div>
+        <div style="margin-top:18px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.55;">이용자 61명이나 후기 61건을 뜻하지 않습니다</div>
+      </div>
+      <div style="padding:40px 44px;border-right:1px solid #E4E7EC;">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#1A6DD9;">조치 완료</div>
+        <div data-a="pop" style="margin-top:20px;font-size:88px;font-weight:700;line-height:0.9;letter-spacing:-0.045em;color:#1A6DD9;font-variant-numeric:tabular-nums;">60건</div>
+        <div style="margin-top:18px;font-size:25px;font-weight:400;color:#3D4451;line-height:1.55;">9차례 업데이트로 조치 · 약 98.4%</div>
+      </div>
+      <div style="padding:40px 0 0 44px;">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#8B93A0;">진행 중</div>
+        <div style="margin-top:20px;font-size:88px;font-weight:700;line-height:0.9;letter-spacing:-0.045em;color:#3D4451;font-variant-numeric:tabular-nums;">1건</div>
+        <div style="margin-top:18px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.55;">특정 신용카드 스캔 불가 · 10월 조치 예정</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:56px;margin-top:56px;padding-top:40px;border-top:1px solid #E4E7EC;">
+      <div>
+        <div style="font-size:25px;font-weight:600;letter-spacing:0.06em;color:#8B93A0;">오류 61건의 유형</div>
+        <div style="margin-top:20px;font-size:28px;font-weight:500;color:#3D4451;line-height:1.7;">예약·결제 18 · N카드·정기권 15 · 승차권 9 · 내일로·상품 8 · 로그인 4 · 기타 7</div>
+      </div>
+      <div>
+        <div style="font-size:28px;font-weight:400;color:#5A6270;line-height:1.65;"><strong style="font-weight:600;color:#14171C;">9월 1~5일 후기에도 가입·접속·가독성 불편이 남아 있습니다.</strong> 다만 이를 두고 완료 처리한 오류가 그대로라고 단정할 수는 없습니다. 61개 오류 번호와 수정 버전, 이번 VOC의 재현 조건을 연결한 확인표가 필요합니다.</div>
+      </div>
+    </div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:52px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="자동화 점검" data-screen-label="21" data-speaker-notes="예약대기 자동 진입을 직접 만들어 확인했습니다. 4초 주기로 조회를 반복해 좌석이 없으면 예약대기를 자동 신청했고, 결제 직전 단계까지 사람이 손대지 않고 진행됐습니다. 실행 중 매크로 탐지에 걸리지 않았습니다." style="background:#0E1A2B;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#FFFFFF;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:rgba(255,255,255,0.14);"><div style="width:72.41%;height:100%;background:#4E92F0;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:rgba(255,255,255,0.64);"><span>보안과 공정성</span><span style="font-variant-numeric:tabular-nums;color:rgba(255,255,255,0.58);">21 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:148px 130px 116px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:56px;font-weight:700;letter-spacing:-0.03em;">예약대기 자동 진입을 직접 만들어 확인했습니다</h2>
+    <div style="margin-top:16px;font-size:26px;font-weight:400;color:rgba(255,255,255,0.6);">위원회 검토를 위한 자체 점검 · 실제 승차권 구매나 재판매에 쓰지 않았고 구체적인 방법은 공개하지 않습니다</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:64px;padding-top:44px;border-top:1px solid rgba(255,255,255,0.16);">
+      <div style="padding-right:44px;">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:rgba(255,255,255,0.5);">조회 주기</div>
+        <div data-a="pop" style="margin-top:22px;font-size:86px;font-weight:700;line-height:0.9;letter-spacing:-0.045em;color:#7FB2F5;font-variant-numeric:tabular-nums;">4초</div>
+        <div style="margin-top:20px;font-size:26px;font-weight:400;color:rgba(255,255,255,0.78);line-height:1.55;">분당 약 15회 조회</div>
+      </div>
+      <div style="padding:0 44px;border-left:1px solid rgba(255,255,255,0.16);">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:rgba(255,255,255,0.5);">자동으로 한 일</div>
+        <div data-a="rise" data-d="1" style="margin-top:22px;font-size:29px;font-weight:600;line-height:1.5;color:rgba(255,255,255,0.92);">지정한 날짜·시간대·열차 종류에 좌석이 생기면 즉시 예약</div>
+      </div>
+      <div style="padding:0 44px;border-left:1px solid rgba(255,255,255,0.16);">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:rgba(255,255,255,0.5);">좌석이 없을 때</div>
+        <div data-a="rise" data-d="2" style="margin-top:22px;font-size:29px;font-weight:600;line-height:1.5;color:rgba(255,255,255,0.92);">예약대기를 자동 신청하고 예약대기번호까지 받았습니다</div>
+      </div>
+      <div style="padding-left:44px;border-left:1px solid rgba(255,255,255,0.16);">
+        <div style="font-size:24px;font-weight:600;letter-spacing:0.1em;color:#7FB2F5;">멈춘 지점</div>
+        <div data-a="rise" data-d="3" style="margin-top:22px;font-size:29px;font-weight:700;line-height:1.5;color:#7FB2F5;">결제 직전 단계까지 사람이 손대지 않고 진행됐습니다</div>
+      </div>
+    </div>
+    <div data-a="rise" data-d="5" style="margin-top:64px;padding-top:40px;border-top:1px solid rgba(255,255,255,0.16);display:grid;grid-template-columns:1fr 1fr;gap:56px;">
+      <div style="font-size:29px;font-weight:600;color:#FFFFFF;line-height:1.55;">실행하는 동안 매크로 탐지에 걸리지 않았습니다. 알려진 차단 기준보다 느리게 움직이면 자동화가 통과합니다.</div>
+      <div style="font-size:27px;font-weight:400;color:rgba(255,255,255,0.72);line-height:1.6;">공개된 API 문서 없이 앱과 같은 요청 형식만으로 만들었습니다. 특별한 기술이 필요하지 않았다는 점이 더 중요합니다.</div>
+    </div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:52px;left:120px;font-size:24px;font-weight:500;color:rgba(255,255,255,0.62);letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="자동화 실행 화면" data-screen-label="22" data-speaker-notes="실행 화면을 확대한 것입니다. 위는 실행 상태, 가운데는 4초 간격으로 조회를 반복한 기록, 아래는 매진된 열차에 예약대기가 신청되어 예약대기번호를 받은 상태입니다." style="background:#F6F7F9;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:75.86%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>보안과 공정성</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">22 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:126px 120px 100px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:48px;font-weight:700;letter-spacing:-0.03em;">실행 화면을 확대한 것입니다</h2>
+    <div style="margin-top:16px;display:flex;align-items:baseline;gap:16px;">
+      <div style="font-size:25px;font-weight:700;color:#1A6DD9;white-space:nowrap;">실행 상태</div>
+      <div style="font-size:24px;font-weight:400;color:#5A6270;">사람이 손대지 않는 동안 시도 10회, 다음 조회 4초 후로 표시됩니다.</div>
+    </div>
+    <img src="./assets/auto-status.png" alt="자동 예매 실행 중 상태 표시" style="display:block;margin-top:8px;width:100%;height:auto;border:1px solid #D5D9DF;" />
+    <div style="margin-top:16px;display:flex;align-items:baseline;gap:16px;">
+      <div style="font-size:25px;font-weight:700;color:#1A6DD9;white-space:nowrap;">조회 기록</div>
+      <div style="font-size:24px;font-weight:400;color:#5A6270;">4초 간격으로 조회를 반복했습니다. 예약 가능한 좌석은 0편이었습니다.</div>
+    </div>
+    <img src="./assets/auto-log.png" alt="4초 간격으로 조회를 반복한 진행 기록" style="display:block;margin-top:8px;width:100%;height:auto;border:1px solid #D5D9DF;" />
+    <div style="margin-top:16px;display:flex;align-items:baseline;gap:16px;">
+      <div style="font-size:25px;font-weight:700;color:#1A6DD9;white-space:nowrap;">받은 결과</div>
+      <div style="font-size:24px;font-weight:400;color:#5A6270;">매진된 열차에 예약대기가 신청되고 예약대기번호가 발급됐습니다. 결제만 사람이 하면 됩니다.</div>
+    </div>
+    <img src="./assets/auto-wait.png" alt="예약대기번호가 발급된 화면" style="display:block;margin-top:6px;width:100%;height:auto;border:1px solid #D5D9DF;" />
+    <div style="margin-top:14px;font-size:24px;font-weight:400;color:#8B93A0;line-height:1.5;">위원회 검토를 위한 자체 점검입니다. 실제 승차권 구매나 재판매에 쓰지 않았고, 만든 방법은 공개하지 않습니다.</div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:40px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="탐지 기준" data-screen-label="23" data-speaker-notes="탐지 기준은 느린 자동화를 놓치고 정상 이용자를 막습니다. 알려진 기준은 1분에 100회 이상 접속인데, 4초 주기는 분당 15회입니다. 반대로 매크로를 쓰지 않은 이용자가 차단 문구와 함께 로그인에 실패했다는 후기가 있습니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:79.31%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>보안과 공정성</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">23 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:148px 120px 116px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:56px;font-weight:700;letter-spacing:-0.03em;">탐지 기준은 느린 자동화를 놓치고 정상 이용자를 막습니다</h2>
+    <div style="margin-top:20px;font-size:27px;font-weight:400;color:#5A6270;letter-spacing:-0.01em;">코레일은 매크로 탐지 솔루션을 운영하며 2025년 7월 도입 이후 1,700만 건을 차단했다고 밝혔습니다(8월 26일)</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px;">
+      <div style="background:#F2F6FD;padding:40px 44px;border-top:4px solid #1A6DD9;">
+        <div style="font-size:25px;font-weight:700;color:#1A6DD9;letter-spacing:0.02em;">느린 자동화는 기준에 닿지 않습니다</div>
+        <div style="margin-top:28px;display:flex;align-items:baseline;gap:16px;">
+          <div style="font-size:25px;font-weight:500;color:#5A6270;">알려진 차단 기준</div>
+        </div>
+        <div style="margin-top:8px;font-size:34px;font-weight:700;color:#3D4451;letter-spacing:-0.025em;font-variant-numeric:tabular-nums;">1분에 100회 이상 접속</div>
+        <div style="margin-top:24px;font-size:25px;font-weight:500;color:#1A6DD9;">이번 점검</div>
+        <div data-a="pop" style="margin-top:8px;font-size:34px;font-weight:700;color:#1A6DD9;letter-spacing:-0.025em;font-variant-numeric:tabular-nums;">1분에 약 15회</div>
+        <div style="margin-top:26px;padding-top:22px;border-top:1px solid #D5DFF2;font-size:25px;font-weight:400;color:#3D4451;line-height:1.55;">사람보다 훨씬 빠르지만 기준의 6분의 1 수준입니다. 명절 1분 150회, 평소 5분 500회 기준도 함께 알려져 있습니다.</div>
+      </div>
+      <div style="background:#F6F7F9;padding:40px 44px;">
+        <div style="font-size:25px;font-weight:700;color:#14171C;letter-spacing:0.02em;">정상 이용자는 막힙니다</div>
+        <div style="margin-top:28px;font-size:27px;font-weight:400;color:#3D4451;line-height:1.6;">“매크로 등 미허가 도구 사용 시 이용이 제한될 수 있습니다”라는 문구와 함께 로그인에 실패했다는 후기가 있습니다. 작성자는 매크로를 쓴 적도, 쓰는 방법도 모른다고 적었습니다.</div>
+        <div style="margin-top:26px;padding-top:22px;border-top:1px solid #D5D9DF;font-size:25px;font-weight:400;color:#5A6270;line-height:1.55;">문구는 앱을 완전히 종료한 뒤 다시 실행하라고 안내합니다. 그대로 해도 들어가지 못했다는 후기입니다.</div>
+      </div>
+      <div style="background:#F6F7F9;padding:40px 44px;">
+        <div style="font-size:25px;font-weight:700;color:#14171C;letter-spacing:0.02em;">제재 근거도 약합니다</div>
+        <div style="margin-top:28px;font-size:27px;font-weight:400;color:#3D4451;line-height:1.6;">매크로 사용 자체를 금지하는 규정이 없어 업무방해죄를 적용하기 어렵다는 지적이 있습니다. AI 도구로 예매 프로그램을 만들기 쉬워졌다는 보도도 있습니다.</div>
+        <div style="margin-top:26px;padding-top:22px;border-top:1px solid #D5D9DF;font-size:25px;font-weight:400;color:#5A6270;line-height:1.55;">코레일은 3회 적발 시 회원 강제 탈퇴 같은 제재를 운영하지만, 적발되지 않으면 제재도 없습니다.</div>
+      </div>
+    </div>
+    <div data-a="rise" data-d="5" style="margin-top:48px;font-size:30px;font-weight:600;color:#14171C;letter-spacing:-0.015em;line-height:1.5;">속도만 기준으로 삼으면 빠른 자동화는 걸러지고 느린 자동화는 남습니다. 피해를 보는 것은 정상적으로 이용하는 사용자들입니다.</div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:48px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="공정성 권고" data-screen-label="24" data-speaker-notes="공공 예매에서는 좌석을 먼저 잡는 순서가 곧 공정성입니다. 접속 횟수만 보지 말고 반복 형태를 함께 봐야 하고, 예약대기 신청도 점검 대상에 넣어야 합니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:82.76%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>보안과 공정성</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">24 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:148px 120px 116px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:58px;font-weight:700;letter-spacing:-0.03em;">공공 예매에서는 공정성을 먼저 지켜야 합니다</h2>
+    <div style="margin-top:20px;font-size:27px;font-weight:400;color:#5A6270;letter-spacing:-0.01em;">민간 예매는 편의의 문제로 볼 수 있지만, 명절 승차권은 앱과 홈페이지가 유일한 창구입니다. 먼저 잡는 순서가 공정성 그 자체입니다.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 56px;margin-top:34px;">
+      <div style="padding:28px 0;border-top:2px solid #1A6DD9;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;color:#1A6DD9;">접속 횟수 대신 반복 형태를 봐야 합니다</div>
+        <div style="margin-top:16px;font-size:27px;font-weight:400;color:#3D4451;line-height:1.6;">일정한 간격으로 반복되는 조회, 사람보다 짧은 화면 체류 시간, 조회에서 예약까지 걸린 시간을 함께 보면 느린 자동화도 드러납니다.</div>
+      </div>
+      <div style="padding:28px 0;border-top:2px solid #1A6DD9;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;color:#1A6DD9;">예약대기 신청도 점검 대상에 넣어야 합니다</div>
+        <div style="margin-top:16px;font-size:27px;font-weight:400;color:#3D4451;line-height:1.6;">지금은 예약대기 신청까지 자동으로 진행됩니다. 결제만 사람이 하면 되기 때문에 예매 자체를 막는 효과가 약합니다.</div>
+      </div>
+      <div style="padding:28px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">서버에서 요청 간격을 제한해야 합니다</div>
+        <div style="margin-top:16px;font-size:27px;font-weight:400;color:#3D4451;line-height:1.6;">앱 안에서만 막으면 앱을 거치지 않는 프로그램에는 통하지 않습니다. 같은 계정이 짧은 간격으로 계속 조회하면 서버가 다음 조회를 잠깐 늦추고, 예약을 받을 때 정식 앱에서 온 요청인지 확인해야 합니다.</div>
+      </div>
+      <div style="padding:28px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">차단 기준은 공개하지 않고 자주 바꿔야 합니다</div>
+        <div style="margin-top:16px;font-size:27px;font-weight:400;color:#3D4451;line-height:1.6;">구체적인 횟수 기준이 알려지면 그 기준이 회피 기준이 됩니다. 기간과 노선에 따라 기준을 다르게 두고 주기적으로 조정해야 합니다.</div>
+      </div>
+      <div style="padding:28px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">잘못 막힌 이용자의 복구 경로가 필요합니다</div>
+        <div style="margin-top:16px;font-size:27px;font-weight:400;color:#3D4451;line-height:1.6;">앱을 다시 실행하라는 안내만으로는 풀리지 않는 사례가 있습니다. 차단 문구에 확인 방법과 문의 창구를 함께 적고, 오탐 건수를 따로 집계해야 합니다.</div>
+      </div>
+      <div style="padding:28px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">명절 예매 결과를 사후 공개하는 편이 좋습니다</div>
+        <div style="margin-top:16px;font-size:27px;font-weight:400;color:#3D4451;line-height:1.6;">예약대기 배정 규칙, 기간 중 차단 건수, 오탐으로 풀어준 건수를 예매가 끝난 뒤 공개하면 공정성에 대한 신뢰를 얻을 수 있습니다.</div>
+      </div>
+    </div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:48px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="종합 인사이트" data-screen-label="25" data-speaker-notes="정리하면 네 가지입니다. UI는 정리됐습니다. 자주 쓰는 경로에서 조작이 늘었습니다. 호환성 검수가 덜 됐습니다. 자동화 차단은 기준을 넘는 속도만 막습니다." style="background:#0E1A2B;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#FFFFFF;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:rgba(255,255,255,0.14);"><div style="width:86.21%;height:100%;background:#4E92F0;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:rgba(255,255,255,0.64);"><span>인사이트와 권고</span><span style="font-variant-numeric:tabular-nums;color:rgba(255,255,255,0.58);">25 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:148px 130px 116px;display:flex;flex-direction:column;justify-content:center;">
+    <div style="font-size:56px;font-weight:700;line-height:1.32;letter-spacing:-0.03em;text-wrap:pretty;">통합의 편익은 유지하고,<br /><span style="color:#7FB2F5;">반복 경로와 결제 정확성을 먼저 고쳐야 합니다.</span></div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:68px;padding-top:44px;border-top:1px solid rgba(255,255,255,0.16);">
+      <div style="padding-right:40px;">
+        <div style="font-size:36px;font-weight:700;color:#7FB2F5;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;">01</div>
+        <div data-a="rise" data-d="1" style="margin-top:20px;font-size:30px;font-weight:700;line-height:1.4;">UI는 정리됐습니다</div>
+        <div data-a="rise" data-d="1" style="margin-top:14px;font-size:26px;font-weight:400;line-height:1.6;color:rgba(255,255,255,0.78);">공식 조사에서 좋아진 점 1위가 디자인·UI 23.9%였고, 언론도 아이콘 중심 배치를 긍정적으로 봤습니다.</div>
+      </div>
+      <div style="padding:0 40px;border-left:1px solid rgba(255,255,255,0.16);">
+        <div style="font-size:36px;font-weight:700;color:#7FB2F5;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;">02</div>
+        <div data-a="rise" data-d="2" style="margin-top:20px;font-size:30px;font-weight:700;line-height:1.4;">자주 쓰는 경로에서 조작이 늘었습니다</div>
+        <div data-a="rise" data-d="2" style="margin-top:14px;font-size:26px;font-weight:400;line-height:1.6;color:rgba(255,255,255,0.78);">정기승차권, 좌석 등급, 타는 곳 확인에서 단계가 하나씩 늘었습니다. 하루 두 번 쓰면 매달 수십 번 반복됩니다.</div>
+      </div>
+      <div style="padding:0 40px;border-left:1px solid rgba(255,255,255,0.16);">
+        <div style="font-size:36px;font-weight:700;color:#7FB2F5;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;">03</div>
+        <div data-a="rise" data-d="3" style="margin-top:20px;font-size:30px;font-weight:700;line-height:1.4;">호환성 검수가 덜 됐습니다</div>
+        <div data-a="rise" data-d="3" style="margin-top:14px;font-size:26px;font-weight:400;line-height:1.6;color:rgba(255,255,255,0.78);">큰 글씨 모드가 홈에만 적용되고, 외국어 화면의 언어가 섞이고, App Store(iOS) 평점이 더 낮습니다.</div>
+      </div>
+      <div style="padding-left:40px;border-left:1px solid rgba(255,255,255,0.16);">
+        <div style="font-size:36px;font-weight:700;color:#7FB2F5;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;">04</div>
+        <div data-a="rise" data-d="4" style="margin-top:20px;font-size:30px;font-weight:700;line-height:1.4;">매크로 차단은 빠른 반복만 잡아냅니다</div>
+        <div data-a="rise" data-d="4" style="margin-top:14px;font-size:26px;font-weight:400;line-height:1.6;color:rgba(255,255,255,0.78);">4초 주기로 천천히 움직이는 프로그램은 차단되지 않았고, 매크로를 쓰지 않은 이용자는 오히려 로그인에서 막혔습니다.</div>
+      </div>
+    </div>
+    <div data-a="rise" data-d="5" style="margin-top:56px;font-size:28px;font-weight:500;color:rgba(255,255,255,0.78);line-height:1.6;">화면 수를 줄이는 것만으로는 부족합니다. 목적을 끝낼 때까지 이용자가 한 조작과 기다린 시간, 다시 입력한 횟수를 함께 줄여야 합니다.</div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:52px;left:120px;font-size:24px;font-weight:500;color:rgba(255,255,255,0.62);letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="즉시 과제" data-screen-label="26" data-speaker-notes="즉시 조치할 과제입니다. 결제와 발권 정확성, 가입 차단, 탑승 직전 승차권 확인, 예약대기 자동 진입 차단입니다. 추석 일반예매가 9월 7일 시작이라 이번 주 안에 판단이 필요합니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:89.66%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>인사이트와 권고</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">26 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:148px 120px 116px;display:flex;flex-direction:column;justify-content:center;">
+    <div style="display:flex;align-items:center;gap:20px;">
+      <h2 style="margin:0;font-size:56px;font-weight:700;letter-spacing:-0.03em;">최대한 빨리 해결해야 하는 과제입니다</h2>
+    </div>
+    <div style="margin-top:20px;font-size:27px;font-weight:400;color:#5A6270;letter-spacing:-0.01em;">돈과 탑승에 닿는 문제를 먼저 둡니다. 추석 예매 기간에는 역 창구에서 표를 팔지 않아 앱과 홈페이지가 유일한 창구입니다.</div>
+    <div style="margin-top:48px;display:flex;flex-direction:column;">
+      <div style="display:grid;grid-template-columns:64px 1fr 1fr;gap:36px;padding:0 0 18px;border-bottom:1px solid #14171C;font-size:24px;font-weight:600;letter-spacing:0.06em;color:#8B93A0;">
+        <div></div><div>과제</div><div>완료 판단 기준</div>
+      </div>
+      <div style="display:grid;grid-template-columns:64px 1fr 1fr;align-items:baseline;gap:36px;padding:16px 0;border-bottom:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;color:#1A6DD9;font-variant-numeric:tabular-nums;">01</div>
+        <div><div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">결제 승인 후 발권 실패, 변경 중 중복 결제와 할인 소실 신고를 다시 재현</div><div style="margin-top:10px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.5;">결제·예약 서버, 앱, 고객센터가 함께 확인</div></div>
+        <div style="font-size:27px;font-weight:400;color:#3D4451;line-height:1.55;">결제·발권·취소 거래를 대조하고, 실패했을 때 기존 승차권을 남기거나 복구 경로를 제시합니다. 영향을 받은 거래를 찾아 개별 안내합니다.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:64px 1fr 1fr;align-items:baseline;gap:36px;padding:16px 0;border-bottom:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;color:#1A6DD9;font-variant-numeric:tabular-nums;">02</div>
+        <div><div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">선택 약관에 동의하지 않으면 가입이 진행되지 않는 문제 확인</div><div style="margin-top:10px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.5;">신고 7건의 표시일이 모두 9월 1~5일</div></div>
+        <div style="font-size:27px;font-weight:400;color:#3D4451;line-height:1.55;">필수 항목만 동의해도 가입이 끝납니다. 오류 문구에 이용자가 실제로 할 수 있는 다음 행동을 적습니다.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:64px 1fr 1fr;align-items:baseline;gap:36px;padding:16px 0;border-bottom:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;color:#1A6DD9;font-variant-numeric:tabular-nums;">03</div>
+        <div><div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">탑승 직전 승차권과 QR 확인이 막히는 문제, 무한 로딩 점검</div><div style="margin-top:10px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.5;">앱·운영·역무가 함께 확인</div></div>
+        <div style="font-size:27px;font-weight:400;color:#3D4451;line-height:1.55;">통신이 불안정하거나 업데이트를 요구하는 상황에서도 승차권 정보와 마지막 갱신 시각을 볼 수 있습니다.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:64px 1fr 1fr;align-items:baseline;gap:36px;padding:16px 0;border-bottom:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;color:#1A6DD9;font-variant-numeric:tabular-nums;">04</div>
+        <div><div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">예약대기까지 자동으로 진행되는 프로그램 차단</div><div style="margin-top:10px;font-size:25px;font-weight:400;color:#5A6270;line-height:1.5;">결제만 사람이 하면 되기 때문에 지금 상태로는 예매를 막는 효과가 약합니다</div></div>
+        <div style="font-size:26px;font-weight:400;color:#3D4451;line-height:1.5;">① 같은 계정이 짧은 간격으로 계속 조회하면 서버가 다음 조회를 잠깐 늦춥니다.<br />② 예약과 예약대기 신청은 정식 앱에서 온 요청인지 확인한 뒤 처리합니다.<br />③ 매크로가 아닌데 막힌 건수를 따로 세어 함께 봅니다.</div>
+      </div>
+    </div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:48px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="2~4주 과제" data-screen-label="27" data-speaker-notes="2~4주 안에 할 과제입니다. 열차 목록 재구성, 왕복 예매, 검색 조건 유지, 나의 티켓 정리, 타는 곳 정보, 결제 수단 조합 검수입니다." style="background:#F6F7F9;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#E1E4E9;"><div style="width:93.10%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>인사이트와 권고</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">27 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:148px 120px 116px;display:flex;flex-direction:column;justify-content:center;">
+    <div style="display:flex;align-items:center;gap:20px;">
+      <h2 style="margin:0;font-size:56px;font-weight:700;letter-spacing:-0.03em;">반복 경로의 조작을 줄이는 과제입니다</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px;">
+      <div style="background:#FFFFFF;padding:38px 40px;">
+        <div style="font-size:31px;font-weight:700;letter-spacing:-0.025em;line-height:1.35;">열차 목록 재구성</div>
+        <div style="margin-top:18px;font-size:26px;font-weight:400;color:#5A6270;line-height:1.6;">일반실·특실·입석·매진을 색 외에 글자와 형태로도 구분합니다. 출발·도착 시각과 운임을 한 줄에서 비교할 수 있게 합니다.</div>
+      </div>
+      <div style="background:#FFFFFF;padding:38px 40px;">
+        <div style="font-size:31px;font-weight:700;letter-spacing:-0.025em;line-height:1.35;">왕복 예매와 일괄 결제</div>
+        <div style="margin-top:18px;font-size:26px;font-weight:400;color:#5A6270;line-height:1.6;">출발역·도착역·날짜를 두 번 입력하지 않게 합니다. 저장한 구간을 매번 다시 고르지 않게 하고, 적용되지 않는 경우는 미리 안내합니다.</div>
+      </div>
+      <div style="background:#FFFFFF;padding:38px 40px;">
+        <div style="font-size:31px;font-weight:700;letter-spacing:-0.025em;line-height:1.35;">검색 조건 유지</div>
+        <div style="margin-top:18px;font-size:26px;font-weight:400;color:#5A6270;line-height:1.6;">열차 종류·날짜·시각·인접역 조건을 뒤로가기와 재조회, 예약대기 신청 뒤에도 유지합니다. 이용자가 지울 때만 초기화합니다.</div>
+      </div>
+      <div style="background:#FFFFFF;padding:38px 40px;">
+        <div style="font-size:31px;font-weight:700;letter-spacing:-0.025em;line-height:1.35;">나의 티켓 정리</div>
+        <div style="margin-top:18px;font-size:26px;font-weight:400;color:#5A6270;line-height:1.6;">가까운 출발 시각을 먼저 보여줍니다. 정기승차권과 전달받은 표를 구분하고, 호차·좌석·타는 곳을 한 화면에서 확인하게 합니다.</div>
+      </div>
+      <div style="background:#FFFFFF;padding:38px 40px;">
+        <div style="font-size:31px;font-weight:700;letter-spacing:-0.025em;line-height:1.35;">타는 곳 정보 표시</div>
+        <div style="margin-top:18px;font-size:26px;font-weight:400;color:#5A6270;line-height:1.6;">확정되지 않았으면 빈칸 대신 ‘미확정’과 확인 방법을 적습니다. 저장된 값을 보여줄 때는 마지막 갱신 시각을 함께 표시합니다.</div>
+      </div>
+      <div style="background:#FFFFFF;padding:38px 40px;">
+        <div style="font-size:31px;font-weight:700;letter-spacing:-0.025em;line-height:1.35;">결제 수단 조합 검수</div>
+        <div style="margin-top:18px;font-size:26px;font-weight:400;color:#5A6270;line-height:1.6;">법인카드와 간편결제의 입력 항목이 저장된 카드와 맞는지 확인합니다. 외부 앱을 다녀온 뒤 로그인과 거래 상태가 되돌아오게 합니다.</div>
+      </div>
+    </div>
+    <div data-a="rise" data-d="5" style="margin-top:44px;font-size:28px;font-weight:500;color:#3D4451;line-height:1.55;">취소표를 노리는 이용자에게 조작 한 번은 좌석을 놓칠 가능성과 이어집니다. 정기권 이용자에게는 표를 여는 한 단계가 매일 반복됩니다.</div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:48px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="3~6개월 과제" data-screen-label="28" data-speaker-notes="3~6개월에 걸쳐 할 과제입니다. 용어와 정보 구조, 접근성과 다국어 검수, 홈 구성 분리, VOC와 기록 연결입니다. 행동분석 시스템 구축 사업의 측정 항목도 지금 정해야 합니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:96.55%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>인사이트와 권고</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">28 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:160px 120px 130px;display:flex;flex-direction:column;justify-content:center;">
+    <div style="display:flex;align-items:center;gap:20px;">
+      <h2 style="margin:0;font-size:56px;font-weight:700;letter-spacing:-0.03em;">구조를 다시 정리하는 과제입니다</h2>
+    </div>
+    <div style="margin-top:52px;display:flex;flex-direction:column;">
+      <div style="display:grid;grid-template-columns:400px 1fr;align-items:baseline;gap:48px;padding:22px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">용어와 정보 구조 정리</div>
+        <div style="font-size:27px;font-weight:400;color:#5A6270;line-height:1.6;">할인, 좌석 유형, 취소 관련 용어와 메뉴 위치를 다시 정합니다. 처음 쓰는 이용자도 따로 설명을 듣지 않고 목적 메뉴를 찾을 수 있어야 하고, 할인이 자동으로 적용됐는지 알 수 있어야 합니다.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:400px 1fr;align-items:baseline;gap:48px;padding:22px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">접근성과 다국어 검수</div>
+        <div style="font-size:27px;font-weight:400;color:#5A6270;line-height:1.6;">큰 글씨, 스크린리더, 외국어, 기기별 화면을 화면 단위로 확인합니다. 큰 글씨에서도 예매·변경·결제의 핵심 정보가 남아야 하고, 키보드와 하단 시스템 영역이 버튼을 가리지 않아야 합니다.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:400px 1fr;align-items:baseline;gap:48px;padding:22px 0;border-top:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">홈 구성 분리 검증</div>
+        <div style="font-size:27px;font-weight:400;color:#5A6270;line-height:1.6;">자주 타는 이용자와 여행 이용자의 홈을 나눠 시험합니다. 예매와 승차권을 먼저 보여주고, 부가 서비스는 필요한 시점에 제안합니다. 실제 소요 시간과 완료율로 확인합니다.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:400px 1fr;align-items:baseline;gap:48px;padding:22px 0;border-top:1px solid #E4E7EC;border-bottom:1px solid #E4E7EC;">
+        <div style="font-size:30px;font-weight:700;letter-spacing:-0.02em;">행동분석 시스템의 측정 항목을 지금 정해야 합니다</div>
+        <div style="font-size:27px;font-weight:400;color:#5A6270;line-height:1.6;">고객경험기반 AI 행동분석 시스템 구축 사업은 2026년 9월부터 2027년 2월까지 6개월, 사업비 18억 200만원입니다. 측정 항목에 <strong style="font-weight:700;">예매 완료율, 결제 성공률, 승차권 열람 성공률, 오탐 차단 건수</strong>를 포함해야 합니다. 시스템 완성을 기다리지 말고 지금 운영 기록으로 먼저 확인할 수 있습니다.</div>
+      </div>
+    </div>
+    <div data-a="rise" data-d="5" style="margin-top:48px;font-size:28px;font-weight:500;color:#3D4451;line-height:1.55;">VOC와 거래·버전 기록을 연결해 오류 번호, 기기, 앱 버전, 하려던 일, 재발 여부를 함께 남기면 같은 문제를 두 번 조사하지 않아도 됩니다.</div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:52px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수</div>
+</section>
+
+<section data-label="Summary" data-screen-label="29" data-speaker-notes="보고 내용을 한 장으로 정리했습니다. 조사 자료, 확인한 문제, 인사이트, 권고 순서입니다." style="background:#FFFFFF;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171C;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#ECEEF1;"><div style="width:100.00%;height:100%;background:#1A6DD9;"></div></div>
+  <div style="position:absolute;top:46px;left:120px;right:120px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;letter-spacing:0.16em;color:#7C8493;"><span>Summary</span><span style="font-variant-numeric:tabular-nums;color:#8B93A0;">29 / 29</span></div>
+  <div data-a="stage" style="position:absolute;inset:144px 120px 112px;display:flex;flex-direction:column;justify-content:center;">
+    <h2 style="margin:0;font-size:54px;font-weight:700;letter-spacing:-0.03em;">Summary</h2>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px 44px;margin-top:28px;">
+      <div style="padding:18px 0;border-top:2px solid #1A6DD9;">
+        <div style="font-size:25px;font-weight:700;letter-spacing:0.04em;color:#1A6DD9;">조사 자료</div>
+        <div style="margin-top:12px;font-size:25px;font-weight:400;color:#3D4451;line-height:1.55;">공식 자료(만족도 조사 70,768명, 오류 조치 현황), SNS 설문 1,026명, 구글 플레이 후기 603건, App Store 후기 10건과 언론 보도 3건. 여기에 예약대기 자동 진입을 직접 점검했습니다.</div>
+      </div>
+      <div style="padding:18px 0;border-top:2px solid #1A6DD9;">
+        <div style="font-size:25px;font-weight:700;letter-spacing:0.04em;color:#1A6DD9;">평가 분석</div>
+        <div style="margin-top:12px;font-size:25px;font-weight:400;color:#3D4451;line-height:1.55;">공식 조사는 5점 중 4점대이고 좋아진 점 1위가 디자인·UI 23.9%입니다. 같은 기간 구글 플레이 후기 평균은 1.65점, App Store(iOS) 누적은 1.4점입니다. 20~30대 평가가 가장 낮습니다.</div>
+      </div>
+      <div style="padding:18px 0;border-top:2px solid #1A6DD9;">
+        <div style="font-size:25px;font-weight:700;letter-spacing:0.04em;color:#1A6DD9;">가장 많이 나온 문제</div>
+        <div style="margin-top:12px;font-size:25px;font-weight:400;color:#3D4451;line-height:1.55;">후기에서는 정보 위계·가독성 189건, 결제·카드 107건, 로딩·접속 102건입니다. SNS 설문에서는 UX 의견 32개, UI 의견 14개가 나왔고 왕복 예매와 반복 입력이 반복됩니다.</div>
+      </div>
+      <div style="padding:18px 0;border-top:2px solid #1A6DD9;">
+        <div style="font-size:25px;font-weight:700;letter-spacing:0.04em;color:#1A6DD9;">원인</div>
+        <div style="margin-top:12px;font-size:25px;font-weight:400;color:#3D4451;line-height:1.55;">정기승차권, 좌석 등급, 타는 곳 확인에서 단계가 하나씩 늘어난 것이 문제의 가장 큰 원인입니다. 큰 글씨 모드는 고령자 등 디지털 취약계층을 위한 기능인데 홈 화면만 바뀌고 하위 메뉴는 그대로 보이는 등 사용자 검증과 최적화가 필요합니다.</div>
+      </div>
+      <div style="padding:18px 0;border-top:2px solid #1A6DD9;">
+        <div style="font-size:25px;font-weight:700;letter-spacing:0.04em;color:#1A6DD9;">보안과 공정성</div>
+        <div style="margin-top:12px;font-size:25px;font-weight:400;color:#3D4451;line-height:1.55;">4초 간격으로 조회하는 프로그램이 예약대기 신청까지 자동으로 끝냈고 차단되지 않았습니다. 반대로 매크로를 쓰지 않은 이용자가 차단 문구와 함께 로그인에 실패했다는 후기가 있습니다.</div>
+      </div>
+      <div style="padding:18px 0;border-top:2px solid #1A6DD9;">
+        <div style="font-size:25px;font-weight:700;letter-spacing:0.04em;color:#1A6DD9;">권고 순서</div>
+        <div style="margin-top:12px;font-size:25px;font-weight:400;color:#3D4451;line-height:1.55;">결제·발권 정확성, 가입 차단, 탑승 직전 승차권 확인, 매크로 차단을 우선순위로 둔 조치가 필요합니다. 다음으로 열차 목록과 왕복 예매, 검색 조건 유지 등 사용성 편의 개선이 되면 좋겠습니다. 이어서 용어와 정보 구조 등 디테일을 정리하면 좋겠습니다.</div>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding-top:20px;border-top:1px solid #E4E7EC;"></div>
+  </div>
+  <div data-credit="1" style="position:absolute;bottom:44px;left:120px;font-size:24px;font-weight:500;color:#8B93A0;letter-spacing:-0.01em;">서울과학기술대학교 디자인학과 고성찬 교수 · 2026년 9월 6일</div>
+</section>
+
+</x-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1920,&quot;height&quot;:1080}}"></script>
+</body>
+</html>
